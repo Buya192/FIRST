@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow read access to mrRealization collection for authenticated users
+    match /mrRealization/{document=**} {
+      allow read: if request.auth != null;
+      allow write: if false; // restrict writes for now
+    }
+
+    // Allow read and write access to masterData collection for authenticated users
+    match /masterData/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Default rule: deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

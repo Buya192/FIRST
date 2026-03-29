@@ -1,0 +1,130 @@
+.sidebar {
+  background-color: #1f2937;
+  width: 16rem;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 3.5rem;
+  overflow-y: auto;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuItem:hover {
+  background-color: #374151;
+}
+
+.menuItem > div {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.icon {
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menuItem:hover .icon {
+  opacity: 1;
+}
+
+.submenu {
+  list-style-type: none;
+  padding-left: 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.submenuOpen {
+  max-height: 24rem;
+}
+
+.submenuItem {
+  padding: 0.5rem 0;
+}
+
+.submenuItem > a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.submenuItem > a:hover {
+  color: white;
+}
+
+.arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrowOpen {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 4rem;
+  }
+
+  .menuItem > div span {
+    display: none;
+  }
+
+  .submenu {
+    position: absolute;
+    left: 4rem;
+    top: 0;
+    background-color: #1f2937;
+    width: 13rem;
+    padding: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+:global(.dark) .sidebar {
+  background-color: #111827;
+}
+
+:global(.dark) .menuItem:hover {
+  background-color: #1f2937;
+}
+
+:global(.dark) .submenuItem > a {
+  color: #9ca3af;
+}
+
+:global(.dark) .submenuItem > a:hover {
+  color: white;
+}
+
+.ant-table-wrapper {
+  color: #9ca3af;
+}
+
+.ant-table-wrapper:hover {
+  color: white;
+}

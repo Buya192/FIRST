@@ -1,0 +1,143 @@
+/* styles/sidebar.css */
+
+.sidebar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo {
+  padding: 1.25rem;
+  text-align: center;
+  background-color: #3b82f6;
+}
+
+.logo h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.menu {
+  border-right: none;
+  flex: 1;
+  padding-top: 0.75rem;
+}
+
+:global(.ant-menu-item),
+:global(.ant-menu-submenu-title) {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  color: #4b5563;
+  transition: all 0.3s ease-in-out;
+}
+
+:global(.ant-menu-item:hover),
+:global(.ant-menu-submenu-title:hover) {
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+:global(.ant-menu-item-selected) {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: bold;
+  border-left: 4px solid #ffffff;
+}
+
+:global(.ant-menu-item-selected::after) {
+  display: none;
+}
+
+:global(.ant-menu-submenu-arrow) {
+  color: #4b5563;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 50;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  :global(.ant-menu) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  :global(.ant-menu-item),
+  :global(.ant-menu-submenu) {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  :global(.ant-menu-submenu-title) {
+    padding: 0;
+  }
+
+  :global(.anticon) {
+    font-size: 1.25rem;
+  }
+
+  :global(.ant-menu-title-content) {
+    display: none;
+  }
+
+  :global(.ant-menu-submenu-arrow) {
+    display: none;
+  }
+}
+
+/* Dark mode styles */
+.dark .sidebar {
+  background-color: #1f2937;
+}
+
+.dark .logo {
+  background-color: #2563eb;
+}
+
+.dark :global(.ant-menu-item),
+.dark :global(.ant-menu-submenu-title) {
+  color: #d1d5db;
+}
+
+.dark :global(.ant-menu-item:hover),
+.dark :global(.ant-menu-submenu-title:hover) {
+  color: #60a5fa;
+  background-color: #374151;
+}
+
+.dark :global(.ant-menu-item-selected) {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Custom styles that can't be easily achieved with Tailwind */
+:global(.ant-menu-item-selected) {
+  position: relative;
+}
+
+:global(.ant-menu-item-selected)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #ffffff;
+}

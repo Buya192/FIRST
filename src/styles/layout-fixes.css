@@ -1,0 +1,247 @@
+/* Layout Fixes - Mengatasi masalah toggle sidebar dan layout tumpang tindih */
+
+/* Reset Header Layout - Hapus margin yang menyebabkan masalah toggle */
+.app-header {
+  margin-left: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+  height: 64px !important;
+  line-height: 64px !important;
+}
+
+/* Sidebar Toggle Button - Pastikan icon di tengah */
+.sidebar-toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  padding: 0 !important;
+}
+
+.sidebar-toggle .anticon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+/* Sidebar Collapsed State - Icon di tengah */
+.ant-layout-sider-collapsed .ant-menu-item,
+.ant-layout-sider-collapsed .ant-menu-submenu-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 16px !important;
+  margin: 4px 8px !important;
+  text-align: center !important;
+}
+
+.ant-layout-sider-collapsed .ant-menu-item .anticon,
+.ant-layout-sider-collapsed .ant-menu-submenu-title .anticon {
+  font-size: 18px !important;
+  margin: 0 !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+/* Enhanced Horizontal Scrollbar untuk data besar */
+.ant-table-wrapper {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar {
+  height: 8px !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 4px !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light)) !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Table Container untuk data besar */
+.ant-table {
+  min-width: 1200px !important;
+  width: max-content !important;
+}
+
+.ant-table-thead > tr > th {
+  white-space: nowrap !important;
+  min-width: 120px !important;
+}
+
+.ant-table-tbody > tr > td {
+  white-space: nowrap !important;
+  min-width: 120px !important;
+}
+
+/* Layout Content - Hapus margin yang tidak perlu */
+.ant-layout-content {
+  margin: 16px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.main-content {
+  padding: 24px !important;
+  margin: 0 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  overflow: visible !important;
+}
+
+.content-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+/* Hapus utility classes yang menyebabkan konflik */
+.full-width {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+/* Actions Container - Responsive untuk button dan search */
+.actions-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-bottom: 16px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.actions-container .ant-btn {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.actions-container .ant-input {
+  min-width: 200px !important;
+  max-width: 300px !important;
+}
+
+/* Master Stock Container - Optimasi untuk data besar */
+.master-stock-container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.master-stock-container .ant-table-wrapper {
+  margin-top: 16px !important;
+  border-radius: 8px !important;
+  border: 1px solid #e2e8f0 !important;
+  overflow: auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .ant-table {
+    min-width: 1000px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ant-layout-content {
+    margin: 12px !important;
+  }
+  
+  .main-content {
+    padding: 16px !important;
+  }
+  
+  .actions-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .actions-container .ant-input {
+    min-width: auto !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin: 8px !important;
+  }
+  
+  .main-content {
+    padding: 12px !important;
+  }
+  
+  .ant-table {
+    min-width: 800px !important;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    min-width: 100px !important;
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  .actions-container {
+    display: none !important;
+  }
+  
+  .ant-table-wrapper::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .ant-table {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+}
+
+/* Performance Optimization */
+.ant-table-tbody > tr {
+  transition: background-color 0.2s ease !important;
+}
+
+.ant-table-wrapper {
+  will-change: scroll-position !important;
+}
+
+/* Focus States */
+.sidebar-toggle:focus-visible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+.ant-table-wrapper:focus-within {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+  border-radius: 8px !important;
+}

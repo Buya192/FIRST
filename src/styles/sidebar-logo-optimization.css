@@ -1,0 +1,240 @@
+/* Sidebar Logo Optimization - FIRST Application */
+
+/* Enhanced Sidebar Logo Container */
+.sidebar-logo .logo-container {
+  padding: 20px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  background: var(--background-light) !important;
+  transition: all var(--transition-base) !important;
+  min-height: 80px !important;
+}
+
+/* Larger FIRST Logo for Sidebar */
+.sidebar-logo .logo-first-img {
+  max-height: 48px !important;
+  max-width: 120px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Hide PLN Logo in Sidebar */
+.sidebar-logo .logo-pln-img {
+  display: none !important;
+}
+
+/* Enhanced Logo Text for Sidebar */
+.sidebar-logo .logo-text {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-left: 12px !important;
+  color: var(--primary-color) !important;
+  letter-spacing: 1px !important;
+}
+
+/* Logo Content Layout */
+.sidebar-logo .logo-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.sidebar-logo .logo-images {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Collapsed State */
+.sidebar-logo.collapsed .logo-container {
+  padding: 16px 8px !important;
+  min-height: 64px !important;
+}
+
+.sidebar-logo.collapsed .logo-first-img {
+  max-height: 32px !important;
+  max-width: 32px !important;
+}
+
+.sidebar-logo.collapsed .logo-text {
+  display: none !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar-logo .logo-container {
+    padding: 16px 12px !important;
+    min-height: 64px !important;
+  }
+  
+  .sidebar-logo .logo-first-img {
+    max-height: 36px !important;
+    max-width: 90px !important;
+  }
+  
+  .sidebar-logo .logo-text {
+    font-size: 18px !important;
+    margin-left: 8px !important;
+  }
+}
+
+/* Logo Hover Effects */
+.sidebar-logo .logo-container:hover {
+  background: rgba(46, 139, 139, 0.05) !important;
+  cursor: pointer !important;
+}
+
+.sidebar-logo .logo-container:hover .logo-text {
+  color: var(--primary-dark) !important;
+}
+
+/* Focus States for Accessibility */
+.sidebar-logo .logo-container:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .sidebar-logo .logo-container {
+    border-bottom: 2px solid #000000 !important;
+    background: #ffffff !important;
+  }
+  
+  .sidebar-logo .logo-text {
+    color: #000000 !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sidebar-logo .logo-container {
+    background: #ffffff !important;
+    border-bottom: 1px solid #000000 !important;
+  }
+  
+  .sidebar-logo .logo-text {
+    color: #000000 !important;
+  }
+}
+
+/* Animation for Logo Loading */
+.sidebar-logo .logo-first-img {
+  transition: all 0.3s ease !important;
+}
+
+.sidebar-logo .logo-first-img:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Logo Error State */
+.sidebar-logo .logo-first-img[style*="display: none"] + .logo-text {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: var(--primary-color) !important;
+}
+
+/* Ensure Logo is Always Visible */
+.sidebar-logo .logo-content {
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Logo Fallback Styling */
+.sidebar-logo .logo-container::before {
+  content: '';
+  display: none;
+}
+
+.sidebar-logo .logo-container:empty::before {
+  content: 'FIRST';
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Smooth Transitions */
+.sidebar-logo * {
+  transition: all var(--transition-base) !important;
+}
+
+/* Logo Brand Colors */
+.sidebar-logo .logo-text {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Collapsed Logo Centering */
+.sidebar-logo.collapsed .logo-content {
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.sidebar-logo.collapsed .logo-images {
+  justify-content: center !important;
+}
+
+/* Logo Loading State */
+.sidebar-logo .logo-first-img[src=""] {
+  display: none !important;
+}
+
+.sidebar-logo .logo-first-img:not([src]),
+.sidebar-logo .logo-first-img[src=""] {
+  display: none !important;
+}
+
+/* Ensure Text is Always Visible When Image Fails */
+.sidebar-logo .logo-content:has(.logo-first-img[style*="display: none"]) .logo-text {
+  display: block !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .sidebar-logo .logo-container {
+    background: var(--background-dark, #1f2937) !important;
+    border-bottom-color: var(--border-dark, #374151) !important;
+  }
+  
+  .sidebar-logo .logo-text {
+    color: var(--text-light, #f9fafb) !important;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .sidebar-logo .logo-text {
+  margin-left: 0 !important;
+  margin-right: 12px !important;
+}
+
+[dir="rtl"] .sidebar-logo.collapsed .logo-text {
+  margin-right: 0 !important;
+}
+
+/* Logo Performance Optimization */
+.sidebar-logo .logo-first-img {
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+}
+
+/* Ensure Logo Container Takes Full Width */
+.sidebar-logo {
+  width: 100% !important;
+}
+
+.sidebar-logo .logo-container {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}

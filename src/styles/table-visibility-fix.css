@@ -1,0 +1,399 @@
+/* Table Visibility Fix - FIRST Application */
+
+/* Table Container Enhanced Width */
+.data-table-container {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: auto !important;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+.data-table-container .ant-table-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: auto !important;
+}
+
+.data-table-container .ant-table {
+  width: 100% !important;
+  min-width: 1400px !important; /* Increased from 1200px */
+  max-width: none !important;
+}
+
+/* Enhanced Horizontal Scroll */
+.data-table-container .ant-table-body {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  max-height: calc(100vh - 300px) !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #1890ff #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar {
+  height: 12px !important;
+  width: 12px !important;
+  background: #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+  border-radius: 6px !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-thumb {
+  background: #1890ff !important;
+  border-radius: 6px !important;
+  border: 2px solid #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #40a9ff !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-corner {
+  background: #f0f0f0 !important;
+}
+
+/* Scroll Indicator */
+.data-table-container::before {
+  content: "← Scroll horizontal untuk melihat semua kolom →";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(24, 144, 255, 0.9);
+  color: white;
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 4px;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.data-table-container:hover::before {
+  opacity: 1;
+}
+
+/* Table Content Optimization */
+.data-table-container .ant-table-content {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.data-table-container .ant-table-thead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}
+
+/* Column Width Specifications - Updated */
+.data-table-container .ant-table-thead > tr > th:nth-child(1) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(2) {
+  width: 180px !important;
+  min-width: 180px !important;
+  max-width: 180px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(3) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(4) {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(5) {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(6) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(7) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(8) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(9) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(10) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+/* Table Body Column Widths - Updated */
+.data-table-container .ant-table-tbody > tr > td:nth-child(1) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(2) {
+  width: 180px !important;
+  min-width: 180px !important;
+  max-width: 180px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(3) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(4) {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(5) {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(6) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(7) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(8) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(9) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(10) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+/* Text Overflow Handling Enhanced */
+.data-table-container .ant-table-tbody > tr > td {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: 6px 4px !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+
+.data-table-container .ant-table-thead > tr > th {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: 8px 4px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  background: #fafafa !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+}
+
+/* Table Size Compact */
+.data-table-container .ant-table-small {
+  font-size: 11px !important;
+}
+
+.data-table-container .ant-table-small .ant-table-thead > tr > th,
+.data-table-container .ant-table-small .ant-table-tbody > tr > td {
+  padding: 6px 4px !important;
+}
+
+/* Responsive Table Adjustments */
+@media (max-width: 1366px) {
+  .data-table-container .ant-table {
+    min-width: 1200px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 4px 3px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .data-table-container .ant-table {
+    min-width: 1000px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 3px 2px !important;
+    font-size: 9px !important;
+  }
+}
+
+/* Table Performance */
+.data-table-container .ant-table-tbody {
+  will-change: scroll-position !important;
+}
+
+/* Ensure All Columns Visible */
+.data-table-container .ant-table-fixed-left,
+.data-table-container .ant-table-fixed-right {
+  z-index: 5 !important;
+}
+
+/* Table Border Enhancement */
+.data-table-container .ant-table-bordered .ant-table-thead > tr > th,
+.data-table-container .ant-table-bordered .ant-table-tbody > tr > td {
+  border-right: 1px solid #f0f0f0 !important;
+}
+
+/* Pagination Compact */
+.data-table-container .ant-pagination {
+  margin: 8px 0 4px 0 !important;
+  text-align: center !important;
+}
+
+.data-table-container .ant-pagination-item,
+.data-table-container .ant-pagination-prev,
+.data-table-container .ant-pagination-next {
+  min-width: 20px !important;
+  height: 20px !important;
+  line-height: 18px !important;
+  font-size: 10px !important;
+  margin: 0 1px !important;
+}
+
+/* Action Buttons Compact */
+.data-table-container .ant-btn {
+  height: 20px !important;
+  padding: 1px 4px !important;
+  font-size: 9px !important;
+  margin: 0 1px !important;
+  border-radius: 3px !important;
+  line-height: 1.1 !important;
+}
+
+.data-table-container .ant-btn-icon-only {
+  width: 20px !important;
+  padding: 0 !important;
+}
+
+/* Tags Compact */
+.data-table-container .ant-tag {
+  font-size: 9px !important;
+  padding: 0 3px !important;
+  border-radius: 2px !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  height: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Loading State */
+.data-table-container .ant-spin-container {
+  min-height: 200px !important;
+}
+
+/* Empty State */
+.data-table-container .ant-empty {
+  margin: 10px 0 !important;
+}
+
+.data-table-container .ant-empty-description {
+  font-size: 11px !important;
+  color: #999 !important;
+}
+
+/* Tooltip for Truncated Text */
+.data-table-container .ant-table-tbody > tr > td[title] {
+  cursor: help !important;
+}
+
+/* Focus States */
+.data-table-container .ant-table-tbody > tr:focus {
+  outline: 2px solid #1890ff !important;
+  outline-offset: -2px !important;
+}
+
+/* Smooth Scrolling */
+.data-table-container .ant-table-body {
+  scroll-behavior: smooth !important;
+}
+
+/* Print Optimization */
+@media print {
+  .data-table-container .ant-table {
+    min-width: auto !important;
+    font-size: 8px !important;
+  }
+  
+  .data-table-container::before {
+    display: none !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 1px !important;
+    font-size: 7px !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .data-table-container .ant-table-thead > tr > th {
+    background: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+  }
+  
+  .data-table-container .ant-table-tbody > tr > td {
+    border: 1px solid #000 !important;
+  }
+}
+
+/* Accessibility */
+.data-table-container .ant-table-tbody > tr[aria-selected="true"] {
+  background: #e6f7ff !important;
+}
+
+.data-table-container .ant-table-tbody > tr:focus-visible {
+  outline: 3px solid #1890ff !important;
+  outline-offset: -3px !important;
+}

@@ -1,0 +1,452 @@
+/* Professional Dual Logo Styles - FIRST + PLN */
+
+/* Base Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-container:focus {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+/* Logo Content */
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: all var(--transition-base);
+}
+
+/* Logo Images Container */
+.logo-images {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* FIRST Logo Image */
+.logo-first-img {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* PLN Logo Image */
+.logo-pln-img {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  transition: all var(--transition-base);
+}
+
+/* Logo Text */
+.logo-text {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+/* Size Variants */
+
+/* Small Size */
+.logo-small .logo-first-img {
+  max-height: 28px;
+  max-width: 28px;
+}
+
+.logo-small .logo-pln-img {
+  max-height: 24px;
+  max-width: 24px;
+}
+
+.logo-small .logo-text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.logo-small .logo-content {
+  gap: var(--space-1);
+}
+
+.logo-small .logo-images {
+  gap: 4px;
+}
+
+/* Medium Size */
+.logo-medium .logo-first-img {
+  max-height: 36px;
+  max-width: 36px;
+}
+
+.logo-medium .logo-pln-img {
+  max-height: 30px;
+  max-width: 30px;
+}
+
+.logo-medium .logo-text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.logo-medium .logo-content {
+  gap: var(--space-2);
+}
+
+.logo-medium .logo-images {
+  gap: var(--space-1);
+}
+
+/* Large Size */
+.logo-large .logo-first-img {
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.logo-large .logo-pln-img {
+  max-height: 40px;
+  max-width: 40px;
+}
+
+.logo-large .logo-text {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.logo-large .logo-content {
+  gap: var(--space-3);
+}
+
+.logo-large .logo-images {
+  gap: var(--space-2);
+}
+
+/* Theme Variants */
+
+/* Primary Theme */
+.logo-primary .logo-text {
+  color: var(--primary-color);
+}
+
+.logo-primary .logo-first-img,
+.logo-primary .logo-pln-img {
+  filter: none;
+}
+
+/* Light Theme */
+.logo-light .logo-text {
+  color: var(--text-inverse);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo-light .logo-first-img,
+.logo-light .logo-pln-img {
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Dark Theme */
+.logo-dark .logo-text {
+  color: var(--text-primary);
+}
+
+.logo-dark .logo-first-img,
+.logo-dark .logo-pln-img {
+  filter: brightness(0.9);
+}
+
+/* Variant Styles */
+
+/* Full Variant */
+.logo-full .logo-content {
+  flex-direction: row;
+}
+
+.logo-full .logo-images {
+  order: 1;
+}
+
+.logo-full .logo-text {
+  order: 2;
+}
+
+/* Compact Variant */
+.logo-compact .logo-content {
+  flex-direction: row;
+}
+
+.logo-compact .logo-images {
+  order: 1;
+}
+
+.logo-compact .logo-text {
+  order: 2;
+}
+
+/* Mini Variant - Only FIRST logo */
+.logo-mini .logo-content {
+  justify-content: center;
+}
+
+.logo-mini .logo-text {
+  display: none;
+}
+
+.logo-mini .logo-pln-img {
+  display: none;
+}
+
+.logo-mini .logo-first-img {
+  max-height: 32px;
+  max-width: 32px;
+}
+
+/* Text Only Variant */
+.logo-text-only .logo-images {
+  display: none;
+}
+
+.logo-text-only .logo-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 2px;
+}
+
+/* Hover Effects */
+.logo-container:hover .logo-content {
+  transform: scale(1.02);
+}
+
+.logo-container:hover .logo-first-img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container:hover .logo-text {
+  color: var(--primary-light);
+}
+
+.logo-light:hover .logo-text {
+  color: var(--accent-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active State */
+.logo-container:active .logo-content {
+  transform: scale(0.98);
+}
+
+/* Loading State */
+.logo-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.logo-loading .logo-first-img,
+.logo-loading .logo-pln-img {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Error State - When images fail to load */
+.logo-first-img[style*="display: none"] + .logo-pln-img,
+.logo-pln-img[style*="display: none"] {
+  margin-left: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo-medium .logo-first-img {
+    max-height: 32px;
+    max-width: 32px;
+  }
+  
+  .logo-medium .logo-pln-img {
+    max-height: 26px;
+    max-width: 26px;
+  }
+  
+  .logo-medium .logo-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .logo-large .logo-first-img {
+    max-height: 40px;
+    max-width: 40px;
+  }
+  
+  .logo-large .logo-pln-img {
+    max-height: 34px;
+    max-width: 34px;
+  }
+  
+  .logo-large .logo-text {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-content {
+    gap: var(--space-1) !important;
+  }
+  
+  .logo-images {
+    gap: 2px !important;
+  }
+  
+  .logo-text {
+    font-size: var(--font-size-sm) !important;
+  }
+  
+  .logo-small .logo-first-img {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  
+  .logo-small .logo-pln-img {
+    max-height: 20px;
+    max-width: 20px;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .logo-first-img,
+  .logo-pln-img {
+    filter: contrast(1.5);
+  }
+  
+  .logo-text {
+    font-weight: var(--font-weight-extrabold) !important;
+  }
+  
+  .logo-container:focus {
+    outline: 3px solid #000000 !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-container,
+  .logo-content,
+  .logo-first-img,
+  .logo-pln-img,
+  .logo-text {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .logo-container:hover .logo-content,
+  .logo-container:hover .logo-first-img,
+  .logo-container:active .logo-content {
+    transform: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .logo-container {
+    color: black !important;
+  }
+  
+  .logo-text {
+    color: black !important;
+    text-shadow: none !important;
+  }
+  
+  .logo-first-img,
+  .logo-pln-img {
+    filter: grayscale(1) !important;
+  }
+}
+
+/* Accessibility Enhancements */
+.logo-container[role="button"] {
+  cursor: pointer;
+}
+
+.logo-container[role="button"]:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 4px;
+}
+
+/* Animation for Logo Entrance */
+.logo-container {
+  animation: logoFadeIn 0.6s ease-out;
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Special Effects for Branding */
+.logo-container.brand-glow:hover .logo-first-img {
+  box-shadow: 0 0 20px rgba(46, 139, 139, 0.3);
+}
+
+.logo-container.brand-glow:hover .logo-pln-img {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+/* Fallback Styles */
+.logo-first-img:not([src]),
+.logo-pln-img:not([src]) {
+  display: none;
+}
+
+/* Ensure proper aspect ratio */
+.logo-first-img,
+.logo-pln-img {
+  aspect-ratio: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Professional spacing for dual logo layout */
+.logo-images:has(.logo-first-img):has(.logo-pln-img) {
+  position: relative;
+}
+
+.logo-images:has(.logo-first-img):has(.logo-pln-img)::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+}
+
+.logo-light .logo-images:has(.logo-first-img):has(.logo-pln-img)::after {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.logo-dark .logo-images:has(.logo-first-img):has(.logo-pln-img)::after {
+  background: rgba(0, 0, 0, 0.2);
+}

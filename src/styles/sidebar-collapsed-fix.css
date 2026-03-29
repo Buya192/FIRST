@@ -1,0 +1,218 @@
+/* Sidebar Collapsed State Fixes - Mengatasi masalah icon terdorong ke samping */
+
+/* Set width optimal untuk collapsed sidebar */
+.ant-layout-sider-collapsed {
+  min-width: 80px !important;
+  width: 80px !important;
+  max-width: 80px !important;
+}
+
+/* Menu item positioning untuk collapsed state */
+.ant-layout-sider-collapsed .ant-menu-item,
+.ant-layout-sider-collapsed .ant-menu-submenu-title {
+  width: 80px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 4px 0 !important;
+  text-align: center !important;
+  height: 48px !important;
+  position: relative !important;
+}
+
+/* Icon positioning - centered dengan sempurna */
+.ant-layout-sider-collapsed .ant-menu-item .anticon,
+.ant-layout-sider-collapsed .ant-menu-submenu-title .anticon {
+  font-size: 20px !important;
+  margin: 0 !important;
+  display: block !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Logo positioning untuk collapsed state */
+.ant-layout-sider-collapsed .sidebar-logo {
+  width: 80px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 16px 0 !important;
+  min-height: 64px !important;
+}
+
+.ant-layout-sider-collapsed .logo-mini,
+.ant-layout-sider-collapsed .logo-mini .logo-first-img {
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Hover effects untuk collapsed menu items */
+.ant-layout-sider-collapsed .ant-menu-item:hover,
+.ant-layout-sider-collapsed .ant-menu-submenu-title:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+/* Selected state untuk collapsed menu */
+.ant-layout-sider-collapsed .ant-menu-item-selected {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+}
+
+/* Tooltip untuk collapsed menu items */
+.ant-layout-sider-collapsed .ant-menu-item:hover::after,
+.ant-layout-sider-collapsed .ant-menu-submenu-title:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  animation: fadeInTooltip 0.2s ease-out 0.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Enhanced Horizontal Scrollbar - Lebih prominent */
+.ant-table-wrapper {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  position: relative !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar {
+  height: 12px !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-track {
+  background: #e2e8f0 !important;
+  border-radius: 6px !important;
+  margin: 0 4px !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light)) !important;
+  border-radius: 6px !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-color)) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transform: scaleY(1.2) !important;
+}
+
+/* Scroll indicator untuk menunjukkan ada data lebih */
+.ant-table-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Table enhancements untuk data panjang */
+.ant-table {
+  min-width: 1400px !important;
+  width: max-content !important;
+}
+
+.ant-table-thead > tr > th {
+  white-space: nowrap !important;
+  min-width: 140px !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}
+
+.ant-table-tbody > tr > td {
+  white-space: nowrap !important;
+  min-width: 140px !important;
+  max-width: 300px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Sticky first column untuk better navigation */
+.ant-table-thead > tr > th:first-child,
+.ant-table-tbody > tr > td:first-child {
+  position: sticky !important;
+  left: 0 !important;
+  z-index: 11 !important;
+  background: white !important;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-table-thead > tr > th:first-child {
+  z-index: 12 !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+/* Content area adjustment untuk collapsed sidebar */
+.ant-layout-content {
+  transition: margin-left 0.3s ease !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .ant-table {
+    min-width: 1000px !important;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    min-width: 120px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-layout-sider-collapsed {
+    width: 60px !important;
+    min-width: 60px !important;
+  }
+  
+  .ant-layout-sider-collapsed .ant-menu-item,
+  .ant-layout-sider-collapsed .ant-menu-submenu-title {
+    width: 60px !important;
+    height: 44px !important;
+  }
+  
+  .ant-layout-sider-collapsed .ant-menu-item .anticon,
+  .ant-layout-sider-collapsed .ant-menu-submenu-title .anticon {
+    font-size: 18px !important;
+  }
+  
+  .ant-table {
+    min-width: 800px !important;
+  }
+}

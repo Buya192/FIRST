@@ -1,0 +1,516 @@
+/* Global Reset & Base Styles */
+body {
+  font-family: 'Inter', sans-serif; /* Menggunakan font Inter atau sans-serif lainnya */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- */
+
+/* Monitoring Masuk Page */
+.monitoringMasukPage {
+  padding: 24px; /* Sedikit lebih banyak padding */
+  background: #f0f2f5; /* Warna latar belakang yang lebih lembut */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Memberikan jarak antar bagian utama */
+}
+
+/* --- */
+
+/* Compact Header */
+.compactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px 30px; /* Padding lebih besar */
+  border-radius: 12px; /* Radius sudut lebih besar */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* Bayangan lebih jelas */
+  transition: all 0.3s ease; /* Transisi halus */
+}
+
+.compactHeader:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Bayangan saat hover */
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.pageTitle {
+  margin: 0 !important;
+  font-size: 24px !important; /* Ukuran judul lebih besar */
+  font-weight: 700; /* Lebih tebal */
+  color: #333; /* Warna teks yang lebih gelap */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageTitle .anticon { /* Jika menggunakan Ant Design Icon */
+  font-size: 28px;
+  color: #1890ff; /* Warna ikon yang menarik */
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Jarak antar elemen lebih besar */
+}
+
+/* --- */
+
+/* Compact Stats Bar */
+.statsBar {
+  display: flex;
+  justify-content: space-around; /* Menyebar item secara merata */
+  align-items: center;
+  background: linear-gradient(135deg, #fefefe, #fcfcfc); /* Gradient background ringan */
+  padding: 16px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  gap: 20px; /* Menambah jarak antar item saat wrap */
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column; /* Label di atas nilai */
+  align-items: center;
+  gap: 6px;
+  min-width: 100px; /* Minimal lebar untuk setiap item */
+  text-align: center;
+}
+
+.statLabel {
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase; /* Huruf kapital untuk label */
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: 22px; /* Ukuran nilai lebih besar */
+  font-weight: 700; /* Lebih tebal */
+  color: #007bff; /* Warna biru yang lebih hidup */
+  animation: fadeIn 0.5s ease-out; /* Animasi fadeIn sederhana */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- */
+
+/* Filter Section */
+.filterSection {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.filterHeader {
+  background: #f8f9fa; /* Latar belakang yang lebih terang */
+  padding: 18px 24px;
+  border-bottom: 1px solid #e0e0e0; /* Border yang lebih lembut */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Jarak antar elemen filter */
+}
+
+.filterHeader .ant-select {
+  font-weight: 500;
+  min-width: 180px; /* Menentukan lebar minimum untuk select */
+}
+
+.filterHeader .ant-select-selector {
+  border-radius: 8px !important; /* Sudut lebih membulat */
+  border: 1px solid #d0d0d0 !important; /* Border yang lebih lembut */
+  padding: 6px 12px !important; /* Padding yang disesuaikan */
+}
+
+.filterHeader .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+}
+
+/* --- */
+
+/* Tab Badge */
+.tabBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600; /* Lebih tebal */
+  font-size: 15px;
+  color: #555;
+}
+
+.tabBadge .ant-badge-count { /* Badge Ant Design */
+  background-color: #1890ff; /* Warna badge yang konsisten */
+  color: white;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  min-width: unset; /* Menghilangkan min-width default */
+  height: unset; /* Menghilangkan height default */
+  line-height: unset; /* Menghilangkan line-height default */
+}
+
+/* --- */
+
+/* Table Styles */
+.filterSection .ant-table {
+  background: transparent;
+}
+
+.filterSection .ant-table-thead > tr > th {
+  background: #f8f9fa; /* Header tabel yang lebih terang */
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
+  color: #444; /* Warna teks header yang lebih lembut */
+  padding: 14px 12px; /* Padding yang lebih baik */
+  font-size: 14px;
+  text-transform: uppercase; /* Huruf kapital untuk header */
+  letter-spacing: 0.3px;
+}
+
+.filterSection .ant-table-tbody > tr > td {
+  padding: 10px 12px; /* Padding yang lebih baik */
+  border-bottom: 1px solid #f5f5f5; /* Garis pemisah baris yang lebih tipis */
+  font-size: 14px;
+  color: #555;
+}
+
+.filterSection .ant-table-tbody > tr:hover > td {
+  background: #e6f7ff; /* Latar belakang hover yang lebih cerah */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* --- */
+
+/* QTY Cell */
+.qtyCell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Jarak yang lebih baik */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.qtyCell .ant-progress {
+  margin: 0;
+  width: 80px; /* Lebar progress bar yang lebih jelas */
+}
+
+.qtyCell .ant-progress-inner {
+  border-radius: 6px;
+  background-color: #e6f7ff; /* Warna latar belakang progress bar */
+}
+
+.qtyCell .ant-progress-bg {
+  border-radius: 6px !important;
+  background-color: #1890ff !important; /* Warna progress bar */
+}
+
+.qtyCell .ant-progress-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --- */
+
+/* Action Buttons */
+.actionButton {
+  transition: all 0.2s ease;
+  border-radius: 6px; /* Sudut lebih membulat */
+  padding: 6px 10px; /* Padding yang lebih baik */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px; /* Ukuran minimum tombol */
+  color: #1890ff; /* Warna ikon/teks */
+  border: 1px solid transparent; /* Border transparan default */
+}
+
+.actionButton:hover {
+  transform: translateY(-2px); /* Efek naik sedikit */
+  background-color: #f0f8ff; /* Latar belakang hover */
+  border-color: #a0d9ff; /* Border saat hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Bayangan saat hover */
+}
+
+/* --- */
+
+/* Arsip Status */
+.arsipLengkap, .arsipBelumLengkap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px; /* Padding yang lebih baik */
+  border-radius: 20px; /* Lebih membulat seperti pil */
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.arsipLengkap {
+  background-color: #e6ffe6; /* Latar belakang hijau muda */
+  color: #008000; /* Teks hijau tua */
+  border: 1px solid #8cff8c;
+}
+
+.arsipLengkap .anticon {
+  color: #008000;
+  margin-right: 4px;
+}
+
+.arsipBelumLengkap {
+  background-color: #ffe6e6; /* Latar belakang merah muda */
+  color: #ff4d4f; /* Teks merah tua */
+  border: 1px solid #ffb3b3;
+}
+
+.arsipBelumLengkap .anticon {
+  color: #ff4d4f;
+  margin-right: 4px;
+}
+
+.arsipText {
+  margin-left: 0; /* Menghilangkan margin kiri yang tidak perlu */
+}
+
+/* --- */
+
+/* Modal Styles */
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px; /* Ukuran judul modal lebih besar */
+  font-weight: 700;
+  color: #333;
+}
+
+.modalTitle .anticon {
+  color: #1890ff;
+  font-size: 24px;
+}
+
+/* --- */
+
+/* Pagination */
+.filterSection .ant-pagination {
+  margin: 20px 0; /* Margin lebih besar */
+  text-align: center;
+  display: flex; /* Menggunakan flexbox untuk penataan */
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Jarak antar item pagination */
+}
+
+.filterSection .ant-pagination-item {
+  border-radius: 8px; /* Sudut lebih membulat */
+  border: 1px solid #d0d0d0;
+  min-width: 32px; /* Ukuran lebih besar */
+  height: 32px;
+  line-height: 30px;
+  transition: all 0.2s ease;
+}
+
+.filterSection .ant-pagination-item:hover {
+  border-color: #1890ff;
+  transform: translateY(-1px);
+}
+
+.filterSection .ant-pagination-item-active {
+  background: #1890ff;
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filterSection .ant-pagination-item-active a {
+  color: white;
+}
+
+.filterSection .ant-pagination-prev,
+.filterSection .ant-pagination-next {
+  min-width: 32px;
+  height: 32px;
+  line-height: 30px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.filterSection .ant-pagination-prev:hover,
+.filterSection .ant-pagination-next:hover {
+  border-color: #1890ff;
+  transform: translateY(-1px);
+}
+
+/* --- */
+
+/* Responsive Design */
+@media (max-width: 992px) { /* breakpoint tablet */
+  .monitoringMasukPage {
+    padding: 16px;
+    gap: 16px;
+  }
+  .compactHeader {
+    padding: 16px 20px;
+  }
+  .pageTitle {
+    font-size: 22px !important;
+  }
+  .statsBar {
+    padding: 16px 20px;
+    gap: 15px;
+  }
+  .statItem {
+    flex-direction: row; /* Kembali ke baris untuk tablet */
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .statItem:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) { /* breakpoint mobile */
+  .monitoringMasukPage {
+    padding: 12px;
+    gap: 12px;
+  }
+  .compactHeader {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    padding: 12px 16px;
+  }
+  .headerRight {
+    justify-content: center;
+  }
+  .statsBar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    padding: 12px 16px;
+  }
+  .pageTitle {
+    font-size: 20px !important;
+    text-align: center;
+    justify-content: center;
+  }
+  .filterSection .ant-table-thead > tr > th,
+  .filterSection .ant-table-tbody > tr > td {
+    padding: 10px 8px; /* Padding tabel yang lebih kecil */
+    font-size: 13px;
+  }
+  .filterHeader {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .filterHeader .ant-select {
+    min-width: unset; /* Hapus min-width di mobile */
+    width: 100%; /* Lebar penuh */
+  }
+}
+
+@media (max-width: 480px) { /* Extra small mobile */
+  .filterTabs .ant-tabs-nav {
+    padding: 0 8px;
+  }
+  .filterTabs .ant-tabs-content-holder {
+    padding: 8px;
+  }
+  .filterTabs .ant-table-thead > tr > th,
+  .filterTabs .ant-table-tbody > tr > td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .tabBadge {
+    font-size: 12px;
+  }
+  .filterSection .ant-pagination-item {
+    min-width: 28px;
+    height: 28px;
+    line-height: 26px;
+  }
+}
+
+/* --- */
+
+/* Compact table scroll */
+.filterTabs .ant-table-container {
+  border-radius: 10px; /* Lebih membulat */
+  overflow: hidden;
+  border: 1px solid #e0e0e0; /* Border tabel */
+}
+
+/* Remove unnecessary spacing (Ant Design specific) */
+.filterTabs .ant-table-wrapper {
+  margin: 0;
+}
+
+/* Compact badges and tags */
+.filterTabs .ant-tag {
+  margin: 0;
+  padding: 3px 8px; /* Padding yang lebih baik */
+  font-size: 12px;
+  border-radius: 14px; /* Lebih membulat seperti pil */
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.filterTabs .ant-badge {
+  font-size: 12px;
+}
+
+/* Compact buttons */
+.filterTabs .ant-btn-sm {
+  height: 28px; /* Ukuran tombol sedikit lebih besar */
+  padding: 0 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filterTabs .ant-btn-sm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Compact tooltips */
+.filterTabs .ant-tooltip {
+  font-size: 13px;
+}
+
+/* Progress bar styling */
+.filterTabs .ant-progress-line {
+  font-size: 12px;
+}
+
+.filterTabs .ant-progress-text {
+  font-size: 11px;
+}

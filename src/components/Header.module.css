@@ -1,0 +1,95 @@
+.header {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navItem {
+  color: #4b5563;
+  transition: color 0.2s ease-in-out;
+}
+
+.navItem:hover {
+  color: #3b82f6;
+}
+
+.activeNavItem {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+}
+
+.userName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Dark mode styles */
+:global(.dark) .header {
+  background-color: #1f2937;
+  color: white;
+}
+
+:global(.dark) .logo {
+  color: #60a5fa;
+}
+
+:global(.dark) .navItem {
+  color: #d1d5db;
+}
+
+:global(.dark) .navItem:hover {
+  color: #60a5fa;
+}
+
+:global(.dark) .activeNavItem {
+  color: #60a5fa;
+}
+
+:global(.dark) .userName {
+  color: #d1d5db;
+}

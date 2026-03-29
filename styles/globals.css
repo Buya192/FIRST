@@ -1,0 +1,152 @@
+/* styles/globals.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom properties */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --transition-duration: 0.3s;
+}
+
+/* Base styles */
+body {
+  font-family: sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+/* Component styles */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-0.125rem);
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-0.25rem);
+}
+
+/* Custom utility classes */
+.interactive {
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.interactive:hover {
+  transform: translateY(-0.125rem);
+}
+
+/* Global styles that can't be easily replaced with Tailwind */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.dark .card {
+  background-color: #1f2937;
+}
+
+.dark .input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: white;
+}
+
+/* Any additional global styles */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+/* Styling for rows based on material condition */
+.row-baik {
+  background-color: #30b874; /* Light green for 'Baik' */
+}
+
+.row-rusak {
+  background-color: #de0e0e; /* Light red for 'Rusak' */
+}

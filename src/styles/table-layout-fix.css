@@ -1,0 +1,270 @@
+/* Table Layout Fix - FIRST Application */
+
+/* Fix for vertical text and layout issues */
+.stock-material-container .ant-table-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+.stock-material-container .ant-table {
+  width: 100% !important;
+  min-width: 1600px !important;
+  table-layout: auto !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+.stock-material-container .ant-table-container {
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+.stock-material-container .ant-table-content {
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+.stock-material-container .ant-table-body {
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  max-height: none !important;
+}
+
+/* Fix for header and cell text orientation */
+.stock-material-container .ant-table-thead > tr > th {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  padding: 16px 12px !important;
+  background: #fafafa !important;
+  border-bottom: 2px solid #e8e8e8 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  position: relative !important;
+}
+
+.stock-material-container .ant-table-tbody > tr > td {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  white-space: normal !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  padding: 12px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  word-wrap: break-word !important;
+  word-break: normal !important;
+}
+
+/* Specific column width fixes */
+.stock-material-container .ant-table colgroup col:nth-child(1) {
+  width: 140px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(2) {
+  width: 280px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(3) {
+  width: 120px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(4) {
+  width: 350px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(5) {
+  width: 80px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(6) {
+  width: 120px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(7) {
+  width: 100px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(8) {
+  width: 140px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(9) {
+  width: 120px !important;
+}
+
+.stock-material-container .ant-table colgroup col:nth-child(10) {
+  width: 140px !important;
+}
+
+/* Remove any transform or rotation */
+.stock-material-container .ant-table-thead > tr > th,
+.stock-material-container .ant-table-tbody > tr > td {
+  transform: none !important;
+  rotate: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+}
+
+/* Fix for text content */
+.stock-material-container .ant-table-thead > tr > th .ant-table-column-title,
+.stock-material-container .ant-table-tbody > tr > td {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  writing-mode: horizontal-tb !important;
+  direction: ltr !important;
+}
+
+/* Ensure proper text flow */
+.stock-material-container .ant-table-thead > tr > th .ant-table-column-title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.stock-material-container .ant-table-tbody > tr > td {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Fix for long text in Material Description */
+.stock-material-container .ant-table-tbody > tr > td:nth-child(4) {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  max-width: 350px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Fix for Storage Location Description */
+.stock-material-container .ant-table-tbody > tr > td:nth-child(2) {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  max-width: 280px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Ensure table is properly contained */
+.stock-material-container {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+/* Fix for table scroll */
+.stock-material-container .ant-table-wrapper {
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  border: 1px solid #e8e8e8 !important;
+  border-radius: 8px !important;
+}
+
+/* Remove any problematic CSS that might cause text rotation */
+.stock-material-container * {
+  writing-mode: initial !important;
+  text-orientation: initial !important;
+  transform: none !important;
+  rotate: none !important;
+}
+
+/* Specific fixes for Ant Design table components */
+.stock-material-container .ant-table-thead {
+  background: #fafafa !important;
+}
+
+.stock-material-container .ant-table-thead > tr > th {
+  background: #fafafa !important;
+  border-bottom: 2px solid #e8e8e8 !important;
+}
+
+.stock-material-container .ant-table-tbody > tr {
+  background: white !important;
+}
+
+.stock-material-container .ant-table-tbody > tr:nth-child(even) {
+  background: #fafbfc !important;
+}
+
+.stock-material-container .ant-table-tbody > tr:hover {
+  background: rgba(46, 139, 139, 0.05) !important;
+}
+
+/* Fix for table pagination */
+.stock-material-container .ant-table-pagination {
+  padding: 16px !important;
+  text-align: center !important;
+  background: #fafafa !important;
+  border-top: 1px solid #e8e8e8 !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 1400px) {
+  .stock-material-container .ant-table {
+    min-width: 1400px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .stock-material-container .ant-table {
+    min-width: 1200px !important;
+  }
+  
+  .stock-material-container .ant-table-thead > tr > th,
+  .stock-material-container .ant-table-tbody > tr > td {
+    padding: 10px 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Force horizontal text layout */
+.stock-material-container .ant-table-thead > tr > th *,
+.stock-material-container .ant-table-tbody > tr > td * {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  direction: ltr !important;
+}
+
+/* Additional safety measures */
+.stock-material-container .ant-table-cell {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.stock-material-container .ant-table-cell-ellipsis {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Fix for any remaining vertical text issues */
+.stock-material-container [style*="writing-mode"] {
+  writing-mode: horizontal-tb !important;
+}
+
+.stock-material-container [style*="text-orientation"] {
+  text-orientation: mixed !important;
+}
+
+.stock-material-container [style*="transform"] {
+  transform: none !important;
+}

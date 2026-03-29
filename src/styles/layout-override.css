@@ -1,0 +1,284 @@
+/* Layout Override - FIRST Application */
+
+/* Override Layout.tsx inline styles for better width utilization */
+.main-content {
+  width: calc(100vw - 280px - 32px) !important;
+  max-width: none !important;
+  padding: 16px !important;
+  margin: 16px !important;
+  min-height: calc(100vh - 144px) !important;
+  background: var(--background-light) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--border-light) !important;
+  overflow: visible !important;
+}
+
+/* Collapsed sidebar state */
+.main-content.sidebar-collapsed {
+  width: calc(100vw - 80px - 32px) !important;
+}
+
+/* Content wrapper full width */
+.content-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Professional content optimization */
+.professional-content {
+  padding: 16px !important;
+  margin: 16px !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-lg) !important;
+  background: var(--background-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  width: calc(100vw - 280px - 32px) !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+
+.professional-content.sidebar-collapsed {
+  width: calc(100vw - 80px - 32px) !important;
+}
+
+/* Remove any conflicting styles from Ant Layout */
+.ant-layout-content {
+  width: calc(100vw - 280px - 32px) !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+
+/* Ensure all child components use full width */
+.main-content > *,
+.content-wrapper > *,
+.professional-content > * {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Specific overrides for SAP and Material components */
+.main-content .stock-sap-container,
+.main-content .stock-material-container,
+.content-wrapper .stock-sap-container,
+.content-wrapper .stock-material-container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Card components full width */
+.main-content .ant-card,
+.content-wrapper .ant-card {
+  width: 100% !important;
+  max-width: none !important;
+  margin-bottom: 16px !important;
+}
+
+/* Space components full width */
+.main-content .ant-space,
+.content-wrapper .ant-space {
+  width: 100% !important;
+}
+
+/* Form components full width */
+.main-content .ant-form,
+.content-wrapper .ant-form {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Alert components optimization */
+.main-content .ant-alert,
+.content-wrapper .ant-alert {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto 16px auto !important;
+}
+
+/* Table components full width */
+.main-content .ant-table-wrapper,
+.content-wrapper .ant-table-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: auto !important;
+}
+
+.main-content .ant-table,
+.content-wrapper .ant-table {
+  width: 100% !important;
+  min-width: 1400px !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    width: calc(100vw - 32px) !important;
+    margin: 16px !important;
+    padding: 16px !important;
+  }
+  
+  .professional-content {
+    width: calc(100vw - 32px) !important;
+    margin: 16px !important;
+    padding: 16px !important;
+  }
+  
+  .ant-layout-content {
+    width: calc(100vw - 32px) !important;
+  }
+  
+  .main-content .ant-alert,
+  .content-wrapper .ant-alert {
+    max-width: none !important;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .main-content {
+    width: calc(100vw - 280px - 24px) !important;
+    margin: 12px !important;
+    padding: 12px !important;
+  }
+  
+  .main-content.sidebar-collapsed {
+    width: calc(100vw - 80px - 24px) !important;
+  }
+  
+  .professional-content {
+    width: calc(100vw - 280px - 24px) !important;
+    margin: 12px !important;
+    padding: 12px !important;
+  }
+  
+  .professional-content.sidebar-collapsed {
+    width: calc(100vw - 80px - 24px) !important;
+  }
+}
+
+/* Large screen optimization */
+@media (min-width: 1400px) {
+  .main-content {
+    width: calc(100vw - 280px - 32px) !important;
+    max-width: none !important;
+  }
+  
+  .main-content.sidebar-collapsed {
+    width: calc(100vw - 80px - 32px) !important;
+  }
+  
+  .professional-content {
+    width: calc(100vw - 280px - 32px) !important;
+    max-width: none !important;
+  }
+  
+  .professional-content.sidebar-collapsed {
+    width: calc(100vw - 80px - 32px) !important;
+  }
+}
+
+/* Remove any max-width constraints */
+.main-content *,
+.content-wrapper *,
+.professional-content * {
+  max-width: none !important;
+}
+
+/* Ensure no overflow hidden on main containers */
+.main-content,
+.content-wrapper,
+.professional-content {
+  overflow: visible !important;
+}
+
+/* Fix for any remaining layout issues */
+.ant-layout {
+  overflow: visible !important;
+}
+
+.ant-layout-content {
+  overflow: visible !important;
+}
+
+/* Ensure sidebar doesn't interfere with content width */
+.ant-layout-sider {
+  flex: 0 0 auto !important;
+}
+
+/* Content area should take remaining space */
+.ant-layout-content {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Remove any transform or positioning issues */
+.main-content,
+.content-wrapper,
+.professional-content {
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Ensure proper box-sizing */
+.main-content,
+.content-wrapper,
+.professional-content,
+.main-content *,
+.content-wrapper *,
+.professional-content * {
+  box-sizing: border-box !important;
+}
+
+/* Fix for any flex layout issues */
+.main-content {
+  display: block !important;
+}
+
+.content-wrapper {
+  display: block !important;
+}
+
+/* Ensure no negative margins */
+.main-content,
+.content-wrapper,
+.professional-content {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Override any conflicting Ant Design styles */
+.ant-layout-has-sider > .ant-layout,
+.ant-layout-has-sider > .ant-layout-content {
+  width: auto !important;
+  margin-left: 0 !important;
+}
+
+/* Ensure content takes full available width */
+.ant-layout-content {
+  width: 100% !important;
+  flex: 1 !important;
+}
+
+/* Fix for header interference */
+.ant-layout-header + .ant-layout-content {
+  margin-top: 0 !important;
+}
+
+/* Ensure no z-index issues */
+.main-content,
+.content-wrapper,
+.professional-content {
+  z-index: auto !important;
+}
+
+/* Performance optimization */
+.main-content,
+.content-wrapper,
+.professional-content {
+  will-change: auto !important;
+  contain: layout !important;
+}

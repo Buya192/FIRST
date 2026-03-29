@@ -1,0 +1,507 @@
+/* User-Friendly Professional Table Styles - FIRST Application */
+
+/* Global Table Container */
+.ant-table-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  background: white;
+  margin-bottom: 24px;
+}
+
+/* Table Base */
+.ant-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-family-base);
+}
+
+/* User-Friendly Table Headers */
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  font-family: var(--font-family-base) !important;
+  border-bottom: 3px solid var(--primary-color) !important;
+  padding: 16px 12px !important;
+  text-align: left !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.4 !important;
+}
+
+.ant-table-thead > tr > th:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%) !important;
+}
+
+/* Header Text Styling */
+.ant-table-thead > tr > th .ant-table-column-title {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Sort Icons */
+.ant-table-thead > tr > th .ant-table-column-sorter {
+  color: #64748b !important;
+  margin-left: 8px !important;
+}
+
+.ant-table-thead > tr > th .ant-table-column-sorter-up.active,
+.ant-table-thead > tr > th .ant-table-column-sorter-down.active {
+  color: var(--primary-color) !important;
+}
+
+/* Table Body */
+.ant-table-tbody {
+  background: white;
+}
+
+/* User-Friendly Row Styling */
+.ant-table-tbody > tr {
+  transition: all 0.2s ease !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+/* Alternating Row Colors for Better Readability */
+.ant-table-tbody > tr:nth-child(even) {
+  background: #fafbfc !important;
+}
+
+.ant-table-tbody > tr:nth-child(odd) {
+  background: white !important;
+}
+
+/* Enhanced Hover Effect */
+.ant-table-tbody > tr:hover {
+  background: rgba(46, 139, 139, 0.08) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+/* Comfortable Cell Spacing */
+.ant-table-tbody > tr > td {
+  padding: 16px 12px !important;
+  font-size: 14px !important;
+  font-family: var(--font-family-base) !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  transition: all 0.2s ease !important;
+  line-height: 1.5 !important;
+  vertical-align: middle !important;
+}
+
+/* Numeric Data Alignment */
+.ant-table-tbody > tr > td[data-type="number"],
+.ant-table-tbody > tr > td.text-right {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums !important;
+  font-weight: 500 !important;
+}
+
+/* Enhanced Action Buttons */
+.ant-table-tbody > tr > td .ant-btn {
+  margin-right: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 4px 12px;
+  height: 32px;
+  line-height: 1.4;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-tbody > tr > td .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ant-table-tbody > tr > td .ant-btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+}
+
+.ant-table-tbody > tr > td .ant-btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+}
+
+/* Status Badges */
+.ant-table-tbody > tr > td .ant-tag {
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border: none;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ant-table-tbody > tr > td .ant-tag-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.ant-table-tbody > tr > td .ant-tag-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.ant-table-tbody > tr > td .ant-tag-error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.ant-table-tbody > tr > td .ant-tag-default {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+}
+
+/* Professional Pagination */
+.ant-table-pagination {
+  padding: 20px 24px !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  margin: 0 !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+.ant-table-pagination .ant-pagination {
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.ant-table-pagination .ant-pagination-item {
+  border-radius: 6px !important;
+  border-color: #d1d5db !important;
+  font-family: var(--font-family-base) !important;
+  font-weight: 500 !important;
+  margin: 0 4px !important;
+}
+
+.ant-table-pagination .ant-pagination-item-active {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.ant-table-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+/* Table Summary Row */
+.ant-table-summary {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
+  border-top: 2px solid var(--primary-color) !important;
+}
+
+.ant-table-summary > tr > td {
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  background: transparent !important;
+  padding: 16px 12px !important;
+  font-size: 14px !important;
+}
+
+/* Empty State */
+.ant-table-placeholder {
+  padding: 48px 24px !important;
+  color: #6b7280 !important;
+  text-align: center !important;
+}
+
+.ant-table-placeholder .ant-empty-description {
+  color: #6b7280 !important;
+  font-family: var(--font-family-base) !important;
+  font-size: 14px !important;
+}
+
+/* Loading State */
+.ant-table-tbody > tr.ant-table-placeholder:hover {
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Fixed Columns */
+.ant-table-cell-fix-left,
+.ant-table-cell-fix-right {
+  background: white !important;
+}
+
+.ant-table-tbody > tr:nth-child(even) .ant-table-cell-fix-left,
+.ant-table-tbody > tr:nth-child(even) .ant-table-cell-fix-right {
+  background: #fafbfc !important;
+}
+
+.ant-table-tbody > tr:hover .ant-table-cell-fix-left,
+.ant-table-tbody > tr:hover .ant-table-cell-fix-right {
+  background: rgba(46, 139, 139, 0.08) !important;
+}
+
+/* Selection Column */
+.ant-table-selection-column {
+  width: 60px !important;
+  text-align: center !important;
+}
+
+.ant-table-tbody > tr > td.ant-table-selection-column {
+  text-align: center !important;
+}
+
+/* Enhanced Checkbox */
+.ant-table .ant-checkbox-wrapper {
+  margin: 0 !important;
+}
+
+.ant-table .ant-checkbox {
+  border-radius: 4px !important;
+}
+
+.ant-table .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ant-table-thead > tr > th {
+    padding: 12px 8px !important;
+    font-size: 13px !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 12px 8px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-table-wrapper {
+    margin: 0 -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .ant-table-thead > tr > th {
+    padding: 10px 6px !important;
+    font-size: 12px !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 10px 6px !important;
+    font-size: 12px !important;
+  }
+  
+  .ant-table-tbody > tr > td .ant-btn {
+    padding: 2px 8px !important;
+    font-size: 11px !important;
+    height: 28px !important;
+  }
+  
+  .ant-table-pagination {
+    padding: 16px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ant-table-thead > tr > th {
+    padding: 8px 4px !important;
+    font-size: 11px !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px !important;
+    font-size: 11px !important;
+  }
+  
+  .ant-table-tbody > tr > td .ant-btn {
+    padding: 2px 6px !important;
+    font-size: 10px !important;
+    height: 24px !important;
+    margin-right: 4px !important;
+  }
+}
+
+/* Professional Table Variants */
+
+/* Compact Table */
+.ant-table-small .ant-table-thead > tr > th {
+  padding: 12px 8px !important;
+  font-size: 13px !important;
+}
+
+.ant-table-small .ant-table-tbody > tr > td {
+  padding: 12px 8px !important;
+  font-size: 13px !important;
+}
+
+/* Large Table */
+.ant-table-large .ant-table-thead > tr > th {
+  padding: 20px 16px !important;
+  font-size: 15px !important;
+}
+
+.ant-table-large .ant-table-tbody > tr > td {
+  padding: 20px 16px !important;
+  font-size: 15px !important;
+}
+
+/* Custom Professional Classes */
+
+/* Data Table for Numbers */
+.data-table .ant-table-tbody > tr > td {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-family-mono);
+}
+
+/* Status Table */
+.status-table .ant-table-tbody > tr > td:last-child {
+  text-align: center;
+}
+
+/* Highlight Important Rows */
+.ant-table-tbody > tr.row-important {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-left: 4px solid #f59e0b !important;
+}
+
+.ant-table-tbody > tr.row-important:hover {
+  background: rgba(245, 158, 11, 0.15) !important;
+}
+
+/* Print Styles */
+@media print {
+  .ant-table-wrapper {
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+  }
+  
+  .ant-table-thead > tr > th {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    color: #000000 !important;
+    border-bottom: 1px solid #cccccc !important;
+  }
+  
+  .ant-table-tbody > tr:nth-child(even) {
+    background: #f8f8f8 !important;
+  }
+  
+  .ant-table-pagination {
+    display: none !important;
+  }
+  
+  .ant-table-tbody > tr > td .ant-btn {
+    display: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .ant-table-thead > tr > th {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-bottom: 3px solid #000000 !important;
+  }
+  
+  .ant-table-tbody > tr > td {
+    color: #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+  }
+  
+  .ant-table-tbody > tr:nth-child(even) {
+    background: #f0f0f0 !important;
+  }
+  
+  .ant-table-tbody > tr:hover {
+    background: #e0e0e0 !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .ant-table-tbody > tr,
+  .ant-table-tbody > tr > td,
+  .ant-table-tbody > tr > td .ant-btn {
+    transition: none !important;
+  }
+  
+  .ant-table-tbody > tr:hover {
+    transform: none !important;
+  }
+}
+
+/* Loading Animation */
+.table-loading {
+  position: relative;
+  opacity: 0.7;
+}
+
+.table-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Accessibility Enhancements */
+.ant-table-tbody > tr:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Table Container with Better Spacing */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 24px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}

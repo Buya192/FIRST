@@ -1,0 +1,487 @@
+/* Stock Material Enhanced Layout - FIRST Application */
+
+/* Container Optimization */
+.stock-material-container {
+  padding: 12px !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.stock-material-container .p-6 {
+  padding: 12px !important;
+}
+
+/* Title Optimization */
+.stock-material-container h3 {
+  margin-bottom: 16px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+/* Statistics Cards Compact */
+.statistics-cards {
+  margin-bottom: 12px !important;
+}
+
+.statistics-cards .ant-card {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  margin-bottom: 8px !important;
+}
+
+.statistics-cards .ant-card-body {
+  padding: 16px 12px !important;
+}
+
+.statistics-cards .ant-statistic {
+  text-align: center !important;
+}
+
+.statistics-cards .ant-statistic-title {
+  font-size: 12px !important;
+  margin-bottom: 4px !important;
+}
+
+.statistics-cards .ant-statistic-content {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+/* Chart Container Ultra Compact */
+.chart-container {
+  margin-bottom: 12px !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+.chart-container .ant-card-body {
+  padding: 12px !important;
+}
+
+.chart-wrapper {
+  height: 120px !important;
+  max-height: 120px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.chart-wrapper canvas {
+  max-height: 120px !important;
+  height: 120px !important;
+  width: 100% !important;
+}
+
+.chart-wrapper > div {
+  height: 120px !important;
+  max-height: 120px !important;
+}
+
+/* Actions Section Compact */
+.actions-section {
+  margin-bottom: 12px !important;
+  padding: 8px 0 !important;
+}
+
+.actions-section .ant-space {
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.actions-section .ant-btn {
+  height: 32px !important;
+  padding: 4px 12px !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+}
+
+/* Filters Section Sticky and Compact */
+.filters-container {
+  position: sticky !important;
+  top: 64px !important;
+  z-index: 100 !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+  margin-bottom: 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.filters-container .ant-space {
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.filters-container .ant-input {
+  height: 32px !important;
+  border-radius: 6px !important;
+}
+
+.filters-container .ant-select {
+  height: 32px !important;
+}
+
+.filters-container .ant-select-selector {
+  height: 32px !important;
+  border-radius: 6px !important;
+}
+
+.filters-container .ant-picker {
+  height: 32px !important;
+  border-radius: 6px !important;
+}
+
+/* Stock Filter Cards Compact */
+.stock-filter-cards {
+  margin-bottom: 12px !important;
+}
+
+.stock-filter-cards .ant-card {
+  height: 60px !important;
+  padding: 8px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.stock-filter-cards .ant-card-body {
+  padding: 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.stock-filter-cards .filter-title {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 2px !important;
+}
+
+.stock-filter-cards .filter-value {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* Table Enhanced Visibility */
+.data-table-container {
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-wrapper {
+  min-height: 500px !important;
+}
+
+.data-table-container .ant-table {
+  font-size: 13px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th {
+  background: #fafafa !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  padding: 12px 8px !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td {
+  padding: 10px 8px !important;
+  border-bottom: 1px solid #f5f5f5 !important;
+  font-size: 12px !important;
+}
+
+.data-table-container .ant-table-tbody > tr:hover > td {
+  background: #f8f9fa !important;
+}
+
+.data-table-container .ant-table-tbody > tr:nth-child(even) {
+  background: #fafafa !important;
+}
+
+.data-table-container .ant-table-tbody > tr:nth-child(even):hover > td {
+  background: #f0f2f5 !important;
+}
+
+/* Table Pagination Compact */
+.data-table-container .ant-pagination {
+  margin: 16px 0 8px 0 !important;
+  text-align: center !important;
+}
+
+.data-table-container .ant-pagination-item {
+  min-width: 28px !important;
+  height: 28px !important;
+  line-height: 26px !important;
+  font-size: 12px !important;
+}
+
+.data-table-container .ant-pagination-prev,
+.data-table-container .ant-pagination-next {
+  min-width: 28px !important;
+  height: 28px !important;
+  line-height: 26px !important;
+}
+
+/* Table Actions */
+.table-actions .ant-btn {
+  height: 28px !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  margin-right: 4px !important;
+  border-radius: 4px !important;
+}
+
+/* Loading State */
+.table-loading {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 300px !important;
+  background: #fafafa !important;
+}
+
+.table-loading p {
+  margin-top: 16px !important;
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+/* Empty State */
+.data-table-container .ant-empty {
+  margin: 40px 0 !important;
+}
+
+.data-table-container .ant-empty-description {
+  color: #999 !important;
+  font-size: 13px !important;
+}
+
+/* Tags in Table */
+.data-table-container .ant-tag {
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+}
+
+/* Modal Optimization */
+.stock-material-modal .ant-modal-content {
+  border-radius: 8px !important;
+}
+
+.stock-material-modal .ant-modal-header {
+  border-radius: 8px 8px 0 0 !important;
+  padding: 16px 20px !important;
+}
+
+.stock-material-modal .ant-modal-body {
+  padding: 20px !important;
+}
+
+.stock-material-modal .ant-form-item {
+  margin-bottom: 16px !important;
+}
+
+.stock-material-modal .ant-form-item-label {
+  padding-bottom: 4px !important;
+}
+
+.stock-material-modal .ant-form-item-label > label {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.stock-material-modal .ant-input,
+.stock-material-modal .ant-select-selector {
+  border-radius: 6px !important;
+  font-size: 13px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .stock-material-container {
+    padding: 8px !important;
+  }
+  
+  .chart-wrapper {
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+  
+  .chart-wrapper canvas,
+  .chart-wrapper > div {
+    height: 100px !important;
+    max-height: 100px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .stock-material-container {
+    padding: 6px !important;
+  }
+  
+  .statistics-cards .ant-col {
+    margin-bottom: 6px !important;
+  }
+  
+  .chart-wrapper {
+    height: 80px !important;
+    max-height: 80px !important;
+  }
+  
+  .chart-wrapper canvas,
+  .chart-wrapper > div {
+    height: 80px !important;
+    max-height: 80px !important;
+  }
+  
+  .filters-container {
+    padding: 8px !important;
+    position: relative !important;
+    top: auto !important;
+  }
+  
+  .data-table-container .ant-table {
+    font-size: 11px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 8px 4px !important;
+  }
+  
+  .stock-filter-cards .ant-card {
+    height: 50px !important;
+  }
+  
+  .stock-filter-cards .filter-title {
+    font-size: 10px !important;
+  }
+  
+  .stock-filter-cards .filter-value {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-wrapper {
+    height: 60px !important;
+    max-height: 60px !important;
+  }
+  
+  .chart-wrapper canvas,
+  .chart-wrapper > div {
+    height: 60px !important;
+    max-height: 60px !important;
+  }
+  
+  .actions-section .ant-btn {
+    height: 28px !important;
+    padding: 2px 8px !important;
+    font-size: 11px !important;
+  }
+  
+  .filters-container .ant-input,
+  .filters-container .ant-select,
+  .filters-container .ant-picker {
+    height: 28px !important;
+  }
+}
+
+/* Print Optimization */
+@media print {
+  .stock-material-container {
+    padding: 0 !important;
+  }
+  
+  .chart-wrapper {
+    height: 120px !important;
+    max-height: 120px !important;
+  }
+  
+  .filters-container,
+  .actions-section {
+    display: none !important;
+  }
+  
+  .data-table-container {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+  
+  .data-table-container .ant-table {
+    font-size: 10px !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .data-table-container {
+    border: 2px solid #000 !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  
+  .data-table-container .ant-table-tbody > tr:nth-child(even) {
+    background: #f0f0f0 !important;
+  }
+}
+
+/* Focus States for Accessibility */
+.stock-material-container .ant-btn:focus,
+.stock-material-container .ant-input:focus,
+.stock-material-container .ant-select:focus {
+  outline: 2px solid #1890ff !important;
+  outline-offset: 2px !important;
+}
+
+/* Smooth Transitions */
+.stock-material-container * {
+  transition: all 0.2s ease !important;
+}
+
+/* Ensure Table Data Visibility */
+.data-table-container .ant-table-tbody {
+  min-height: 400px !important;
+  background: #ffffff !important;
+}
+
+.data-table-container .ant-table-placeholder {
+  display: none !important;
+}
+
+/* Force Table Content Display */
+.data-table-container .ant-table-content {
+  min-height: 400px !important;
+}
+
+.data-table-container .ant-spin-container {
+  min-height: 400px !important;
+}
+
+/* Optimize Table Scroll */
+.data-table-container .ant-table-body {
+  max-height: 500px !important;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+}
+
+/* Table Header Sticky */
+.data-table-container .ant-table-thead th {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}

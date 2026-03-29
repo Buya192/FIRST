@@ -1,0 +1,160 @@
+.container {
+  padding: 24px;
+}
+
+.tabNavigation {
+  margin-bottom: 16px;
+}
+
+.tabButton {
+  margin-right: 8px;
+}
+
+.tabButton.active {
+  background-color: #1890ff;
+  color: white;
+}
+
+.printPreview {
+  max-height: 600px;
+  overflow: auto;
+  border: 1px solid #d9d9d9;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.printContent {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+.printHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.printLogo {
+  float: right;
+  margin-bottom: 20px;
+}
+
+.printTitle {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.printTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.printTable th,
+.printTable td {
+  border: 1px solid #000;
+  padding: 6px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.printTable th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.infoSection {
+  margin: 15px 0;
+}
+
+.infoTable {
+  width: 100%;
+  border: none;
+}
+
+.infoTable td {
+  border: none;
+  padding: 2px;
+}
+
+.printSignature {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signatureBox {
+  width: 30%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.statusTag {
+  font-weight: bold;
+}
+
+.materialsList {
+  margin: 16px 0;
+}
+
+.materialItem {
+  padding: 8px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.formSection {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #1890ff;
+}
+
+.documentNumber {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  vertical-align: top;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media print {
+  .container {
+    padding: 0;
+  }
+  
+  .tabNavigation,
+  .actionButtons {
+    display: none;
+  }
+  
+  .printContent {
+    margin: 0;
+    font-size: 11px;
+  }
+  
+  .printTable th,
+  .printTable td {
+    font-size: 10px;
+    padding: 4px;
+  }
+}

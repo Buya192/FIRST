@@ -1,0 +1,210 @@
+.reservasiContainer {
+  padding: 24px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.reservasiContent {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.reservasiForm {
+  margin-top: 24px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 24px;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.addButton {
+  margin-top: 16px;
+}
+
+.printView {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.printHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.plnLogo {
+  width: 100px;
+  height: auto;
+  margin-right: 24px;
+}
+
+.signatures {
+  margin-top: 48px;
+  text-align: right;
+}
+
+.actionButtons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  margin-left: 8px;
+}
+
+.materialCard {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.materialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+  .reservasiContainer {
+    padding: 0;
+    background-color: white;
+  }
+
+  .reservasiContent {
+    box-shadow: none;
+  }
+
+  .card {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .actionButtons {
+    display: none;
+  }
+
+  .printView {
+    box-shadow: none;
+  }
+
+  .printHeader {
+    margin-bottom: 16px;
+  }
+
+  .plnLogo {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  .signatures {
+    margin-top: 32px;
+  }
+}
+/* CSS untuk Tab */
+.tabContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #d1d5db; /* Warna default (abu-abu) */
+  color: #40a97d;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+/* Warna khusus untuk tab Daftar Reservasi */
+.daftarReservasiActive {
+  background-color: #34d399; /* Warna hijau untuk tab aktif Daftar Reservasi */
+  color: white;
+}
+
+/* Warna khusus untuk tab Detail Material */
+.detailMaterialActive {
+  background-color: #60a5fa; /* Warna biru untuk tab aktif Detail Material */
+  color: white;
+}
+
+.tabButton:hover {
+  background-color: #9ca3af; /* Warna saat hover */
+}
+
+/* Styles for material dropdown */
+.materialDropdown {
+  width: 100%;
+}
+
+.materialOption {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.materialOptionHeader {
+  background-color: #1890ff;
+  color: white;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.materialOptionHeaderLow {
+  background-color: #ff4d4f;
+}
+
+.materialOptionHeaderMedium {
+  background-color: #faad14;
+}
+
+.materialOptionHeaderHigh {
+  background-color: #52c41a;
+}
+
+.materialOptionRow {
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.materialOptionLabel {
+  font-weight: bold;
+  margin-right: 8px;
+  min-width: 60px;
+}
+
+.materialOptionValue {
+  flex: 1;
+}

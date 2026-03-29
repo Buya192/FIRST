@@ -1,0 +1,46 @@
+/* TabNavigation.module.css */
+.tabContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  .tabNavigation {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tabButton {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .tabButton:hover {
+    background-color: #d9d9d9;
+  }
+  
+  .tabButton.active {
+    background-color: #1890ff;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .tabButton:disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+  }
+  
+  .tabContent {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+  }
+  

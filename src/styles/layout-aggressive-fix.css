@@ -1,0 +1,461 @@
+/* Aggressive Layout Fix - FIRST Application */
+
+/* CSS Variables for Dynamic Layout */
+:root {
+  --sidebar-width: 180px;
+  --sidebar-collapsed-width: 50px;
+  --header-height: 44px;
+  --content-padding: 4px;
+}
+
+/* Force Sidebar Reduction */
+.ant-layout-sider {
+  width: var(--sidebar-width) !important;
+  min-width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  flex: 0 0 var(--sidebar-width) !important;
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  z-index: 100 !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-layout-sider-collapsed {
+  width: var(--sidebar-collapsed-width) !important;
+  min-width: var(--sidebar-collapsed-width) !important;
+  max-width: var(--sidebar-collapsed-width) !important;
+  flex: 0 0 var(--sidebar-collapsed-width) !important;
+}
+
+/* Force Header Layout */
+.ant-layout-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: var(--sidebar-width) !important;
+  right: 0 !important;
+  width: auto !important;
+  height: var(--header-height) !important;
+  line-height: var(--header-height) !important;
+  padding: 0 4px !important;
+  z-index: 99 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-layout-sider-collapsed + .ant-layout .ant-layout-header {
+  left: var(--sidebar-collapsed-width) !important;
+}
+
+/* Force Content Area Positioning */
+.ant-layout-content {
+  position: fixed !important;
+  top: var(--header-height) !important;
+  left: var(--sidebar-width) !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: var(--content-padding) !important;
+  overflow: auto !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-layout-sider-collapsed + .ant-layout .ant-layout-content {
+  left: var(--sidebar-collapsed-width) !important;
+}
+
+/* Force Main Content Full Width */
+.main-content {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+/* Stock Material Container Optimization */
+.stock-material-container {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 4px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Header Layout Sections */
+.header-left {
+  flex: 0 0 100px !important;
+  min-width: 100px !important;
+  max-width: 120px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.header-center {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.header-right {
+  flex: 0 0 220px !important;
+  min-width: 200px !important;
+  max-width: 250px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+/* Enhanced User Info */
+.header-user-info {
+  width: 100% !important;
+  max-width: 200px !important;
+  min-width: 150px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  color: white !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.header-user-info .ant-avatar {
+  flex-shrink: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  font-size: 10px !important;
+  margin-right: 6px !important;
+}
+
+.header-user-email {
+  flex: 1 !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+/* Table Container Absolute Positioning */
+.data-table-container {
+  position: absolute !important;
+  top: 140px !important; /* Space for filters and actions */
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: auto !important;
+  background: white !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Force Table Full Width */
+.data-table-container .ant-table-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: auto !important;
+}
+
+.data-table-container .ant-table {
+  width: 100% !important;
+  min-width: 1600px !important;
+  max-width: none !important;
+}
+
+/* Compact Components Above Table */
+.statistics-cards,
+.chart-container,
+.actions-section {
+  margin-bottom: 4px !important;
+  padding: 2px !important;
+}
+
+.statistics-cards .ant-card,
+.chart-container .ant-card {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.statistics-cards .ant-card-body,
+.chart-container .ant-card-body {
+  padding: 8px !important;
+}
+
+/* Compact Chart */
+.chart-container {
+  height: 120px !important;
+}
+
+.chart-wrapper {
+  height: 100px !important;
+}
+
+/* Filters Sticky Positioning */
+.filters-container {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  background: white !important;
+  padding: 8px !important;
+  margin-bottom: 4px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Stock Filter Cards Compact */
+.stock-filter-cards {
+  margin-bottom: 4px !important;
+}
+
+.stock-filter-cards .ant-card {
+  height: 60px !important;
+  padding: 4px !important;
+}
+
+.stock-filter-cards .ant-card-body {
+  padding: 4px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1366px) {
+  :root {
+    --sidebar-width: 160px;
+    --header-height: 40px;
+  }
+  
+  .header-user-info {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+    max-width: 180px !important;
+  }
+  
+  .header-user-email {
+    font-size: 9px !important;
+  }
+  
+  .header-right {
+    flex: 0 0 180px !important;
+    min-width: 160px !important;
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 50px; /* Auto collapse */
+    --header-height: 36px;
+  }
+  
+  .ant-layout-sider {
+    width: var(--sidebar-width) !important;
+  }
+  
+  .header-user-info {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+    max-width: 150px !important;
+  }
+  
+  .header-user-email {
+    font-size: 8px !important;
+  }
+  
+  .header-right {
+    flex: 0 0 150px !important;
+    min-width: 130px !important;
+    max-width: 170px !important;
+  }
+  
+  .header-left {
+    flex: 0 0 80px !important;
+    min-width: 60px !important;
+    max-width: 100px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px; /* Hide sidebar */
+    --header-height: 32px;
+  }
+  
+  .ant-layout-sider {
+    transform: translateX(-100%) !important;
+  }
+  
+  .header-user-info {
+    font-size: 8px !important;
+    padding: 2px 4px !important;
+    max-width: 120px !important;
+  }
+  
+  .header-user-email {
+    font-size: 7px !important;
+  }
+  
+  .header-right {
+    flex: 0 0 120px !important;
+    min-width: 100px !important;
+    max-width: 140px !important;
+  }
+  
+  .header-left {
+    flex: 0 0 60px !important;
+    min-width: 40px !important;
+    max-width: 80px !important;
+  }
+}
+
+/* Force Override Any Conflicting Styles */
+.ant-layout,
+.ant-layout-has-sider {
+  overflow: hidden !important;
+}
+
+/* Ensure No Scrollbars on Main Layout */
+body,
+html,
+#root {
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block !important;
+    position: fixed !important;
+    top: 8px !important;
+    left: 8px !important;
+    z-index: 1001 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 4px !important;
+    width: 32px !important;
+    height: 24px !important;
+    padding: 0 !important;
+  }
+}
+
+/* Sidebar Toggle Animation */
+.ant-layout-sider-trigger {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  text-align: center !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-layout-sider-trigger:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Header Title Responsive */
+.header-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+@media (max-width: 1024px) {
+  .header-title {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 10px !important;
+  }
+}
+
+/* Ensure Proper Z-Index Stacking */
+.ant-layout-sider {
+  z-index: 100 !important;
+}
+
+.ant-layout-header {
+  z-index: 99 !important;
+}
+
+.ant-layout-content {
+  z-index: 1 !important;
+}
+
+.data-table-container {
+  z-index: 2 !important;
+}
+
+.filters-container {
+  z-index: 10 !important;
+}
+
+/* Performance Optimization */
+.ant-layout-sider,
+.ant-layout-header,
+.ant-layout-content {
+  will-change: transform, width, left !important;
+}
+
+/* Smooth Transitions */
+* {
+  transition: width 0.2s ease, left 0.2s ease, transform 0.2s ease !important;
+}
+
+/* Print Optimization */
+@media print {
+  .ant-layout-sider {
+    display: none !important;
+  }
+  
+  .ant-layout-header {
+    display: none !important;
+  }
+  
+  .ant-layout-content {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}

@@ -1,0 +1,28 @@
+/* MR Realization Table Styling */
+.mr-table-header th {
+  background-color: #2BBBAD !important; /* Teal/turquoise color (original) */
+  color: white !important; /* White text for better contrast */
+  font-weight: bold !important;
+  font-size: 12px !important; /* Smaller font size for headers */
+  padding: 8px 12px !important; /* Reduced padding for more compact look */
+}
+
+.mr-table-zebra tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Smaller font size for table content */
+.compact-table td {
+  font-size: 12px !important;
+  padding: 6px 12px !important; /* Reduced padding for table cells */
+}
+
+/* Additional styling for detailed view */
+.material-table {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.action-icon-button {
+  padding: 4px 8px;
+}

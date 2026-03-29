@@ -1,0 +1,1084 @@
+/* MRRealization Component Styles - Modern & Professional */
+.container {
+  padding: 24px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Modern Table Styles */
+.modernTable {
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modernTable :global(.ant-table) {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modernTable :global(.ant-table-container) {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Memperbaiki header tabel */
+.modernTable :global(.ant-table-thead > tr > th) {
+  background: #f0f5ff;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f1f1f;
+  border-bottom: 1px solid #e6f0ff;
+  padding: 16px;
+  position: relative;
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+}
+
+/* Memperbaiki sel tabel */
+.modernTable :global(.ant-table-tbody > tr > td) {
+  font-size: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  transition: all 0.2s ease;
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+}
+
+/* Memperbaiki baris tabel */
+.tableRow {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickableRow:hover {
+  background-color: #f0f9ff !important;
+}
+
+/* Memperbaiki scrollbar tabel */
+.modernTable :global(.ant-table-body) {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #1890ff #f0f0f0;
+}
+
+.modernTable :global(.ant-table-body::-webkit-scrollbar) {
+  width: 8px;
+  height: 8px;
+}
+
+.modernTable :global(.ant-table-body::-webkit-scrollbar-track) {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.modernTable :global(.ant-table-body::-webkit-scrollbar-thumb) {
+  background: #1890ff;
+  border-radius: 4px;
+}
+
+/* Professional Header */
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tableHeader h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #262626;
+  letter-spacing: -0.02em;
+}
+
+.tableHeader .ant-typography {
+  color: #8c8c8c;
+  font-size: 14px;
+  margin: 0;
+}
+
+.tableActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tableActions .ant-btn {
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tableActions .ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.2);
+}
+
+.tableActions .ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+}
+
+/* Modern Search Container */
+.searchContainer {
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.searchContainer .ant-input-search {
+  border-radius: 8px;
+}
+
+.searchContainer .ant-input-search .ant-input {
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+/* Summary Cards */
+.summaryCard {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.summaryCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: #d9d9d9;
+}
+
+.summaryCard .ant-statistic-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8c8c8c;
+  margin-bottom: 8px;
+}
+
+.summaryCard .ant-statistic-content {
+  font-size: 28px;
+  font-weight: 700;
+  color: #262626;
+}
+
+/* Modern Drawer */
+.detailDrawer .ant-drawer-content {
+  border-radius: 12px 0 0 12px;
+}
+
+.drawerHeader {
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.drawerHeader h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #262626;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Modern Tabs */
+.detailTabs {
+  background: white;
+}
+
+.detailTabs .ant-tabs-nav {
+  padding: 0 24px;
+  margin: 0;
+  background: #fafafa;
+}
+
+.detailTabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8c8c8c;
+  padding: 16px 24px;
+  margin: 0;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.detailTabs .ant-tabs-tab:hover {
+  color: #1890ff;
+}
+
+.detailTabs .ant-tabs-tab-active {
+  color: #1890ff;
+  background: white;
+  border-bottom: 3px solid #1890ff;
+}
+
+.detailTabs .ant-tabs-ink-bar {
+  display: none;
+}
+
+.detailTabs .ant-tabs-content-holder {
+  background: white;
+}
+
+/* Sidebar Cards */
+.sidebarCard {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.sidebarCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.sidebarCard .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 20px;
+  min-height: auto;
+}
+
+.sidebarCard .ant-card-head-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  padding: 0;
+}
+
+.sidebarCard .ant-card-body {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Document Section */
+.documentSection {
+  padding: 24px;
+}
+
+.documentList {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.documentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #f5f5f5;
+  transition: all 0.2s ease;
+}
+
+.documentItem:last-child {
+  border-bottom: none;
+}
+
+.documentItem:hover {
+  background: #f9f9f9;
+  margin: 0 -16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.documentInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.documentStatus {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.documentStatus.uploaded {
+  background: #52c41a;
+  box-shadow: 0 0 0 3px rgba(82, 196, 26, 0.2);
+}
+
+.documentStatus.pending {
+  background: #d9d9d9;
+  border: 2px solid #f0f0f0;
+}
+
+.documentStatus.uploading {
+  background: #1890ff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(24, 144, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(24, 144, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(24, 144, 255, 0);
+  }
+}
+
+.documentName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.documentActions {
+  display: flex;
+  gap: 8px;
+}
+
+.documentActions .ant-btn {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Upload Area */
+.uploadArea {
+  margin-top: 24px;
+  padding: 32px;
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  text-align: center;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.uploadArea:hover {
+  border-color: #1890ff;
+  background: #f0f9ff;
+}
+
+.uploadArea.dragOver {
+  border-color: #1890ff;
+  background: #f0f9ff;
+  transform: scale(1.02);
+}
+
+.uploadIcon {
+  font-size: 48px;
+  color: #d9d9d9;
+  margin-bottom: 16px;
+}
+
+.uploadText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.uploadSubtext {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+/* Material Cards */
+.materialCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.materialCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.materialCard .ant-row {
+  margin-bottom: 12px;
+}
+
+.materialCard .ant-row:last-child {
+  margin-bottom: 0;
+}
+
+.materialCard .ant-col {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.materialCard strong {
+  color: #262626;
+  font-weight: 600;
+}
+
+/* Status Tags */
+.statusTag {
+  font-weight: 600;
+  border-radius: 12px;
+  font-size: 12px;
+  padding: 4px 12px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+/* Progress Bar */
+.progressContainer {
+  margin: 16px 0;
+}
+
+.progressContainer .ant-progress-line {
+  margin-bottom: 8px;
+}
+
+.progressContainer .ant-progress-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Modal Styles */
+.uploadModal .ant-modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.uploadModal .ant-modal-header {
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 24px;
+}
+
+.uploadModal .ant-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.uploadModal .ant-modal-body {
+  padding: 24px;
+}
+
+.uploadModal .ant-form-item-label > label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.uploadModal .ant-upload-drag {
+  border-radius: 8px;
+  border-color: #d9d9d9;
+}
+
+.uploadModal .ant-upload-drag:hover {
+  border-color: #1890ff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .detailTabs .ant-tabs-content-holder {
+    padding: 16px;
+  }
+  
+  .sidebarCard {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .tableHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+    padding: 20px;
+  }
+  
+  .tableActions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .modernTable {
+    font-size: 12px;
+  }
+  
+  .modernTable .ant-table-thead > tr > th {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+  
+  .modernTable .ant-table-tbody > tr > td {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+  
+  .searchContainer {
+    padding: 16px;
+  }
+  
+  .drawerHeader {
+    padding: 20px 16px;
+  }
+  
+  .detailTabs .ant-tabs-nav {
+    padding: 0 16px;
+  }
+  
+  .detailTabs .ant-tabs-tab {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  .documentSection {
+    padding: 16px;
+  }
+  
+  .documentList {
+    padding: 16px;
+  }
+  
+  .uploadArea {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .tableHeader {
+    padding: 16px;
+  }
+  
+  .tableHeader h3 {
+    font-size: 20px;
+  }
+  
+  .summaryCard .ant-statistic-content {
+    font-size: 24px;
+  }
+  
+  .documentItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .documentActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Loading States */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.skeletonTable {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Success Animation */
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.successCheckmark {
+  animation: checkmark 0.3s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  .container {
+    padding: 0;
+    background: white;
+  }
+  
+  .tableActions,
+  .searchContainer {
+    display: none !important;
+  }
+  
+  .modernTable {
+    font-size: 12px;
+    box-shadow: none;
+  }
+  
+  .modernTable .ant-table-thead > tr > th,
+  .modernTable .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+}
+
+/* Enhanced Table Styles */
+.modernTable .ant-table {
+  background: transparent;
+}
+
+.modernTable .ant-table-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modernTable .ant-table-pagination {
+  margin: 16px 0 0 0;
+  padding: 16px 0;
+}
+
+.modernTable .ant-pagination-item {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.2s ease;
+}
+
+.modernTable .ant-pagination-item:hover {
+  border-color: #1890ff;
+  transform: translateY(-1px);
+}
+
+.modernTable .ant-pagination-item-active {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+/* Enhanced Button Styles */
+.tableActions .ant-btn:focus,
+.tableActions .ant-btn:active {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.documentActions .ant-btn:focus,
+.documentActions .ant-btn:active {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Enhanced Form Styles */
+.uploadModal .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.uploadModal .ant-upload {
+  width: 100%;
+}
+
+.uploadModal .ant-upload .ant-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px dashed #d9d9d9;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.uploadModal .ant-upload .ant-btn:hover {
+  border-color: #1890ff;
+  background: #f0f9ff;
+}
+
+/* Enhanced Image Styles */
+.materialCard .ant-image {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.materialCard .ant-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Drawer Styles */
+.detailDrawer .ant-drawer-body {
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.detailDrawer .ant-drawer-header {
+  display: none;
+}
+
+/* Enhanced Tab Styles */
+.detailTabs .ant-tabs-nav-wrap {
+  background: #fafafa;
+}
+
+.detailTabs .ant-tabs-nav-list {
+  background: transparent;
+}
+
+.detailTabs .ant-tabs-tab-btn {
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* Enhanced Card Styles */
+.summaryCard .ant-card-body {
+  padding: 20px;
+}
+
+.sidebarCard .ant-card-body {
+  color: #595959;
+}
+
+.materialCard .ant-card-body {
+  padding: 0;
+}
+
+/* Enhanced Status Styles */
+.statusTag.ant-tag {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Enhanced Progress Styles */
+.progressContainer .ant-progress {
+  margin: 8px 0;
+}
+
+.progressContainer .ant-progress-line {
+  margin-bottom: 4px;
+}
+
+/* Enhanced Search Styles */
+.searchContainer .ant-input-search-button {
+  border-radius: 0 8px 8px 0;
+  border-left: 0;
+}
+
+.searchContainer .ant-input-search-button:hover {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+/* Enhanced Switch Styles */
+.tableActions .ant-switch {
+  margin-right: 8px;
+}
+
+.tableActions .ant-switch-checked {
+  background-color: #1890ff;
+}
+
+/* Enhanced Typography */
+.drawerHeader .ant-typography {
+  margin: 0;
+}
+
+.tableHeader .ant-typography {
+  line-height: 1.4;
+}
+
+/* Enhanced Responsive Styles */
+@media (max-width: 576px) {
+  .summaryCard .ant-statistic-content {
+    font-size: 20px;
+  }
+  
+  .summaryCard .ant-statistic-title {
+    font-size: 12px;
+  }
+  
+  .tableActions {
+    gap: 8px;
+  }
+  
+  .tableActions .ant-btn {
+    height: 36px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+  
+  .detailTabs .ant-tabs-tab {
+    font-size: 12px;
+    padding: 12px 12px;
+  }
+}
+
+/* New Styles for Modern Dashboard */
+.dashboardCard {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+}
+
+.dashboardCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.cardStats {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #595959;
+  margin-bottom: 4px;
+}
+
+.cardValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #262626;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cardTrend {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.trendPositive {
+  color: #52c41a;
+  font-weight: 600;
+}
+
+.trendNegative {
+  color: #f5222d;
+  font-weight: 600;
+}
+
+.cardBadge {
+  margin-top: 8px;
+}
+
+.cardSubtext {
+  font-size: 12px;
+  color: #8c8c8c;
+  margin-top: 4px;
+}
+
+/* Smart Table Styles */
+.smartTableCard {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.smartTableCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.cardHover {
+  transition: all 0.3s ease;
+}
+
+.cardHover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cardShadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.smartTable {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.smartTable :global(.ant-table-thead > tr > th) {
+  background: #f0f5ff;
+  font-weight: 600;
+  color: #1d39c4;
+}
+
+.smartTable :global(.ant-table-tbody > tr > td) {
+  transition: background-color 0.2s;
+}
+
+.smartTable :global(.ant-table-tbody > tr:hover > td) {
+  background-color: #f0f9ff !important;
+}
+
+.smartTable :global(.ant-table-expanded-row) {
+  background: #fafafa;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #141414;
+    color: #fff;
+  }
+  
+  .modernTable .ant-table-thead > tr > th {
+    background: #262626;
+    color: #fff;
+    border-bottom-color: #434343;
+  }
+  
+  .modernTable .ant-table-tbody > tr > td {
+    background: #1f1f1f;
+    color: #fff;
+    border-bottom-color: #434343;
+  }
+  
+  .modernTable .ant-table-tbody > tr:hover > td {
+    background: #262626;
+  }
+  
+  .tableHeader,
+  .searchContainer,
+  .documentList,
+  .materialCard {
+    background: #1f1f1f;
+    border-color: #434343;
+    color: #fff;
+  }
+  
+  .drawerHeader {
+    background: #262626;
+    border-bottom-color: #434343;
+    color: #fff;
+  }
+  
+  .sidebarCard {
+    background: #1f1f1f;
+    border-color: #434343;
+  }
+  
+  .sidebarCard .ant-card-body {
+    background: #1f1f1f;
+    color: #fff;
+  }
+  
+  .uploadArea {
+    background: #262626;
+    border-color: #434343;
+    color: #fff;
+  }
+  
+  .detailTabs {
+    background: #1f1f1f;
+  }
+  
+  .detailTabs .ant-tabs-nav {
+    background: #262626;
+  }
+  
+  .detailTabs .ant-tabs-content-holder {
+    background: #1f1f1f;
+  }
+  
+  .summaryCard {
+    background: #1f1f1f;
+    border-color: #434343;
+    color: #fff;
+  }
+}

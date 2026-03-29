@@ -1,0 +1,328 @@
+.container {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.summaryCard {
+  text-align: center;
+  padding: 16px;
+}
+
+.summaryNumber {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.summaryLabel {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.filterSection {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabButton {
+  margin-right: 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.bulkActionBar {
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+  border: 1px solid #91d5ff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.urgentTag {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modernTable {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modernTable .ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.modernTable .ant-table-tbody > tr:hover > td {
+  background: #f0f9ff;
+}
+
+.statusPending {
+  color: #faad14;
+  background: #fff7e6;
+  border: 1px solid #ffd591;
+}
+
+.statusApproved {
+  color: #52c41a;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+}
+
+.statusRejected {
+  color: #ff4d4f;
+  background: #fff2f0;
+  border: 1px solid #ffb3b3;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.photoItem {
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photoItem img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoItem img:hover {
+  transform: scale(1.05);
+}
+
+.detailCard {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.notificationAlert {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerSection {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchSection {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionButton {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.materialDescription {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.pelaksanaInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeInfo {
+  font-size: 11px;
+  color: #999;
+}
+
+.progressBar {
+  margin-top: 8px;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+}
+
+.modalContent {
+  padding: 16px;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.infoSection {
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #1890ff;
+}
+
+.infoItem {
+  margin-bottom: 12px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.infoValue {
+  font-weight: 500;
+  color: #333;
+}
+
+.materialTable {
+  margin-top: 16px;
+}
+
+.materialTable .ant-table-thead > tr > th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+.rejectionForm {
+  margin-top: 16px;
+}
+
+.warningAlert {
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.bulkActions {
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+  border: 1px solid #91d5ff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectedCount {
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.filterReset {
+  color: #666;
+  border-color: #d9d9d9;
+}
+
+.filterReset:hover {
+  color: #1890ff;
+  border-color: #1890ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .photoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summaryNumber {
+    font-size: 24px;
+  }
+  
+  .headerSection {
+    padding: 16px;
+  }
+  
+  .searchSection {
+    padding: 16px;
+  }
+}
+
+/* Animation for loading states */
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Custom scrollbar */
+.modernTable .ant-table-body::-webkit-scrollbar {
+  height: 8px;
+}
+
+.modernTable .ant-table-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modernTable .ant-table-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modernTable .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

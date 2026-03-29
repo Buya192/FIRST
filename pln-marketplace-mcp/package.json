@@ -1,0 +1,36 @@
+{
+  "name": "pln-marketplace-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for PLN Marketplace API integration and monitoring",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "node --loader ts-node/esm src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/firebase": "^2.4.32",
+    "@types/node": "^20.0.0",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "keywords": [
+    "mcp",
+    "pln",
+    "marketplace",
+    "api",
+    "integration"
+  ],
+  "author": "PLN Material Management System",
+  "license": "MIT"
+}

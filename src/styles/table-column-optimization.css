@@ -1,0 +1,444 @@
+/* Table Column Optimization - FIRST Application */
+
+/* Table Container Enhanced */
+.data-table-container .ant-table-wrapper {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.data-table-container .ant-table {
+  width: 100% !important;
+  min-width: 1200px !important; /* Minimum width to show all columns */
+}
+
+/* Column Width Specifications */
+.data-table-container .ant-table-thead > tr > th:nth-child(1) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(2) {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(3) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(4) {
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(5) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(6) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(7) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(8) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(9) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:nth-child(10) {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+/* Table Body Column Widths */
+.data-table-container .ant-table-tbody > tr > td:nth-child(1) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(2) {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(3) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(4) {
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(5) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(6) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(7) {
+  width: 80px !important;
+  min-width: 80px !important;
+  max-width: 80px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(8) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(9) {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+
+.data-table-container .ant-table-tbody > tr > td:nth-child(10) {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+/* Text Overflow Handling */
+.data-table-container .ant-table-tbody > tr > td {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: 8px 6px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.data-table-container .ant-table-thead > tr > th {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: 10px 6px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: #fafafa !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+}
+
+/* Table Scroll Enhancement */
+.data-table-container .ant-table-body {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  max-height: calc(100vh - 320px) !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #d1d5db #f3f4f6 !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar {
+  height: 8px !important;
+  width: 8px !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-track {
+  background: #f3f4f6 !important;
+  border-radius: 4px !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-thumb {
+  background: #d1d5db !important;
+  border-radius: 4px !important;
+}
+
+.data-table-container .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af !important;
+}
+
+/* Table Header Sticky */
+.data-table-container .ant-table-thead > tr > th {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}
+
+/* Row Hover Effects */
+.data-table-container .ant-table-tbody > tr:hover > td {
+  background: #f8f9fa !important;
+  cursor: pointer !important;
+}
+
+.data-table-container .ant-table-tbody > tr:nth-child(even) {
+  background: #fafafa !important;
+}
+
+.data-table-container .ant-table-tbody > tr:nth-child(even):hover > td {
+  background: #f0f2f5 !important;
+}
+
+/* Action Column Optimization */
+.data-table-container .ant-table-tbody > tr > td:last-child {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+  text-align: center !important;
+  position: sticky !important;
+  right: 0 !important;
+  background: inherit !important;
+  z-index: 5 !important;
+}
+
+.data-table-container .ant-table-thead > tr > th:last-child {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+  text-align: center !important;
+  position: sticky !important;
+  right: 0 !important;
+  background: #fafafa !important;
+  z-index: 11 !important;
+}
+
+/* Action Buttons Compact */
+.data-table-container .ant-btn {
+  height: 24px !important;
+  padding: 2px 6px !important;
+  font-size: 11px !important;
+  margin: 0 2px !important;
+  border-radius: 4px !important;
+  line-height: 1.2 !important;
+}
+
+.data-table-container .ant-btn-icon-only {
+  width: 24px !important;
+  padding: 0 !important;
+}
+
+/* Tags Optimization */
+.data-table-container .ant-tag {
+  font-size: 10px !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Pagination Compact */
+.data-table-container .ant-pagination {
+  margin: 12px 0 6px 0 !important;
+  text-align: center !important;
+}
+
+.data-table-container .ant-pagination-item {
+  min-width: 24px !important;
+  height: 24px !important;
+  line-height: 22px !important;
+  font-size: 11px !important;
+  margin: 0 1px !important;
+}
+
+.data-table-container .ant-pagination-prev,
+.data-table-container .ant-pagination-next {
+  min-width: 24px !important;
+  height: 24px !important;
+  line-height: 22px !important;
+  margin: 0 1px !important;
+}
+
+.data-table-container .ant-pagination-options {
+  margin-left: 8px !important;
+}
+
+.data-table-container .ant-select-selector {
+  height: 24px !important;
+  font-size: 11px !important;
+}
+
+/* Loading State */
+.data-table-container .ant-spin-container {
+  min-height: 300px !important;
+}
+
+.data-table-container .ant-spin-dot {
+  font-size: 20px !important;
+}
+
+/* Empty State */
+.data-table-container .ant-empty {
+  margin: 20px 0 !important;
+}
+
+.data-table-container .ant-empty-description {
+  font-size: 12px !important;
+  color: #999 !important;
+}
+
+/* Responsive Table */
+@media (max-width: 1366px) {
+  .data-table-container .ant-table {
+    min-width: 1000px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 6px 4px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .data-table-container .ant-table {
+    min-width: 800px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 4px 3px !important;
+    font-size: 10px !important;
+  }
+  
+  .data-table-container .ant-btn {
+    height: 20px !important;
+    padding: 1px 4px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-table-container .ant-table {
+    min-width: 600px !important;
+  }
+  
+  .data-table-container .ant-table-body {
+    max-height: calc(100vh - 280px) !important;
+  }
+}
+
+/* Table Performance Optimization */
+.data-table-container .ant-table-tbody {
+  will-change: scroll-position !important;
+  contain: layout style !important;
+}
+
+.data-table-container .ant-table-row {
+  will-change: background-color !important;
+}
+
+/* Print Optimization */
+@media print {
+  .data-table-container .ant-table {
+    min-width: auto !important;
+    font-size: 8px !important;
+  }
+  
+  .data-table-container .ant-table-thead > tr > th,
+  .data-table-container .ant-table-tbody > tr > td {
+    padding: 2px !important;
+    font-size: 8px !important;
+  }
+  
+  .data-table-container .ant-pagination {
+    display: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .data-table-container .ant-table-thead > tr > th {
+    background: #000 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+  }
+  
+  .data-table-container .ant-table-tbody > tr > td {
+    border: 1px solid #000 !important;
+  }
+  
+  .data-table-container .ant-table-tbody > tr:nth-child(even) {
+    background: #f0f0f0 !important;
+  }
+}
+
+/* Focus States for Accessibility */
+.data-table-container .ant-table-tbody > tr:focus {
+  outline: 2px solid #1890ff !important;
+  outline-offset: -2px !important;
+}
+
+.data-table-container .ant-btn:focus {
+  outline: 2px solid #1890ff !important;
+  outline-offset: 1px !important;
+}
+
+/* Smooth Scrolling */
+.data-table-container .ant-table-body {
+  scroll-behavior: smooth !important;
+}
+
+/* Table Border Optimization */
+.data-table-container .ant-table-bordered .ant-table-thead > tr > th,
+.data-table-container .ant-table-bordered .ant-table-tbody > tr > td {
+  border-right: 1px solid #f0f0f0 !important;
+}
+
+.data-table-container .ant-table-bordered .ant-table-thead > tr > th:last-child,
+.data-table-container .ant-table-bordered .ant-table-tbody > tr > td:last-child {
+  border-right: none !important;
+}
+
+/* Table Selection Optimization */
+.data-table-container .ant-table-selection-column {
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+}
+
+.data-table-container .ant-checkbox-wrapper {
+  margin: 0 !important;
+}
+
+/* Table Expand Icon */
+.data-table-container .ant-table-row-expand-icon {
+  width: 16px !important;
+  height: 16px !important;
+  line-height: 14px !important;
+  font-size: 10px !important;
+}
+
+/* Table Summary Row */
+.data-table-container .ant-table-summary {
+  background: #fafafa !important;
+  font-weight: 600 !important;
+}
+
+.data-table-container .ant-table-summary > tr > td {
+  border-top: 2px solid #d9d9d9 !important;
+  font-weight: 600 !important;
+}

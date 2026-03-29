@@ -1,0 +1,22 @@
+.form {
+  max-width: 100%; /* Ubah menjadi 100% agar mengisi ruang yang tersedia */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Tambahkan gaya lain sesuai kebutuhan */

@@ -1,0 +1,33 @@
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+.ant-layout {
+  transition: all 0.2s;
+}
+
+.ant-layout-sider {
+  transition: all 0.2s;
+}
+
+.ant-layout-content {
+  transition: all 0.2s;
+}
+
+.site-layout-background {
+  background: #fff;
+  padding: 24px;
+  min-height: 360px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}

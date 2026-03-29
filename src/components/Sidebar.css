@@ -1,0 +1,36 @@
+.ant-layout-sider {
+  background: #001529;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item {
+  font-size: 14px;
+  padding-left: 24px !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-icon {
+  font-size: 18px;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
+  background-color: #1890ff;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item:hover {
+  background-color: #40a9ff;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}

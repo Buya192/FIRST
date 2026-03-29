@@ -1,0 +1,410 @@
+/* Enhanced UI Improvements for FIRST Application */
+
+/* Enhanced Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-corner {
+  background: #f8fafc;
+}
+
+/* Thin scrollbar for tables */
+.ant-table-wrapper ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ant-table-wrapper ::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+/* Elegant scrollbar for sidebar */
+.sidebar-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(46, 139, 139, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 139, 139, 0.6);
+}
+
+/* Sidebar Collapsed State Improvements */
+.ant-layout-sider-collapsed .ant-menu-item,
+.ant-layout-sider-collapsed .ant-menu-submenu-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 16px !important;
+  margin: 4px 8px !important;
+  position: relative !important;
+}
+
+.ant-layout-sider-collapsed .ant-menu-item .anticon,
+.ant-layout-sider-collapsed .ant-menu-submenu-title .anticon {
+  font-size: 18px !important;
+  margin: 0 !important;
+  color: var(--text-primary) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.ant-layout-sider-collapsed .ant-menu-item-selected .anticon,
+.ant-layout-sider-collapsed .ant-menu-submenu-title:hover .anticon {
+  color: var(--primary-color) !important;
+}
+
+/* Tooltip for collapsed menu items */
+.ant-layout-sider-collapsed .ant-menu-item:hover::after,
+.ant-layout-sider-collapsed .ant-menu-submenu-title:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text-primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  animation: fadeInTooltip 0.2s ease-out 0.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Enhanced Table Features */
+.ant-table-thead > tr > th {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+.ant-table-tbody > tr:hover {
+  background: rgba(46, 139, 139, 0.05) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Pagination Enhancements */
+.ant-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 16px !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-radius: 0 0 8px 8px !important;
+}
+
+.ant-pagination .ant-pagination-item {
+  border-radius: 6px !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-pagination .ant-pagination-item:hover {
+  border-color: var(--primary-color) !important;
+  transform: translateY(-1px) !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Loading Skeleton for Better UX */
+.table-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.table-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Enhanced Logo Visibility in Collapsed Sidebar */
+.ant-layout-sider-collapsed .sidebar-logo {
+  padding: 16px 8px !important;
+  min-height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-layout-sider-collapsed .logo-mini .logo-first-img {
+  max-height: 32px !important;
+  max-width: 32px !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Improved Data Density Options */
+.data-density-compact .ant-table-tbody > tr > td {
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+}
+
+.data-density-comfortable .ant-table-tbody > tr > td {
+  padding: 16px 12px !important;
+  font-size: 14px !important;
+}
+
+/* Enhanced Search and Filter Styling */
+.ant-input-search .ant-input-group .ant-input-affix-wrapper {
+  border-radius: 6px 0 0 6px !important;
+}
+
+.ant-input-search .ant-input-group .ant-btn {
+  border-radius: 0 6px 6px 0 !important;
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.ant-input-search .ant-input-group .ant-btn:hover {
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* Enhanced Button Styling */
+.ant-btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light)) !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(46, 139, 139, 0.2) !important;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(46, 139, 139, 0.3) !important;
+}
+
+/* Enhanced Modal Styling */
+.ant-modal-content {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.ant-modal-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light)) !important;
+  border-bottom: none !important;
+  padding: 20px 24px !important;
+}
+
+.ant-modal-title {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.ant-modal-close {
+  color: white !important;
+}
+
+.ant-modal-close:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Enhanced Form Styling */
+.ant-form-item-label > label {
+  font-weight: 500 !important;
+  color: var(--text-primary) !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(46, 139, 139, 0.2) !important;
+}
+
+/* Enhanced Card Styling */
+.ant-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+.ant-card-head-title {
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Enhanced Switch Styling */
+.ant-switch-checked {
+  background: var(--primary-color) !important;
+}
+
+.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  background: var(--primary-dark) !important;
+}
+
+/* Enhanced Upload Styling */
+.ant-upload.ant-upload-drag {
+  border-radius: 8px !important;
+  border: 2px dashed #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+.ant-upload.ant-upload-drag:hover {
+  border-color: var(--primary-color) !important;
+  background: rgba(46, 139, 139, 0.02) !important;
+}
+
+/* Enhanced Tooltip Styling */
+.ant-tooltip-inner {
+  background: var(--text-primary) !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.ant-tooltip-arrow::before {
+  background: var(--text-primary) !important;
+}
+
+/* Enhanced Message Styling */
+.ant-message .ant-message-notice-content {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .ant-table-wrapper {
+    overflow-x: auto !important;
+  }
+  
+  .ant-table {
+    min-width: 800px !important;
+  }
+  
+  .actions-container {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .actions-container .ant-btn {
+    width: 100% !important;
+  }
+  
+  .actions-container .ant-input {
+    width: 100% !important;
+  }
+}
+
+/* Print Optimizations */
+@media print {
+  .ant-table-wrapper ::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .ant-pagination {
+    display: none !important;
+  }
+  
+  .actions-container {
+    display: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  ::-webkit-scrollbar-thumb {
+    background: #000000 !important;
+  }
+  
+  .ant-table-thead > tr > th {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  .ant-btn-primary {
+    background: #000000 !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .ant-table-tbody > tr:hover {
+    transform: none !important;
+  }
+  
+  .ant-btn-primary:hover {
+    transform: none !important;
+  }
+}
