@@ -666,23 +666,41 @@ const StockMaterial: React.FC = () => {
     {
       title: 'Action',
       key: 'action',
+      width: 140,
       render: (_: any, record: StockMaterialItem) => (
         <Space size="small">
-          <Button icon={<QrcodeOutlined />} onClick={(e) => {
-            e.stopPropagation();
-            setSelectedQrData({
-              nomorDokumen: record.id,
-              deskripsiMaterial: record.materialDescription,
-              normalisasiNumber: record.material,
-              quantity: record.totalStock || record.stock || 0,
-              satuan: record.satuan,
-              kondisi: 'Baik',
-              status: 'Aktif'
-            });
-            setQrModalVisible(true);
-          }} title="Print QR Code" />
-          <Button icon={<EditOutlined />} onClick={(e) => { e.stopPropagation(); handleEdit(record); }} />
-          <Button icon={<DeleteOutlined />} onClick={(e) => { e.stopPropagation(); handleDelete(record.id); }} danger />
+          <Tooltip title="Cetak Barcode Material">
+            <Button
+              type="primary"
+              ghost
+              icon={<QrcodeOutlined />}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedQrData({
+                  nomorDokumen: record.id,
+                  deskripsiMaterial: record.materialDescription,
+                  normalisasiNumber: record.material,
+                  quantity: record.totalStock || record.stock || 0,
+                  satuan: record.satuan,
+                  kondisi: 'Baik',
+                  status: 'Aktif'
+                });
+                setQrModalVisible(true);
+              }}
+            />
+          </Tooltip>
+          <Tooltip title="Edit">
+            <Button icon={<EditOutlined />} onClick={(e) => { e.stopPropagation(); handleEdit(record); }} />
+          </Tooltip>
+          <Popconfirm
+            title="Yakin ingin menghapus item ini?"
+            onConfirm={(e) => { e?.stopPropagation(); handleDelete(record.id); }}
+            onCancel={(e) => e?.stopPropagation()}
+          >
+            <Tooltip title="Hapus">
+              <Button icon={<DeleteOutlined />} danger onClick={(e) => e.stopPropagation()} />
+            </Tooltip>
+          </Popconfirm>
         </Space>
       ),
     },

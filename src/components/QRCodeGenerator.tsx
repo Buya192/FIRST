@@ -28,49 +28,118 @@ const QRCodeGenerator: React.FC<{ data: QRCodeData }> = ({ data }) => {
       printWindow.document.write(`
       <html>
         <head>
-          <title>Print QR Code</title>
+          <title>Print QR Code - ${data.normalisasiNumber || data.nomorDokumen}</title>
           <style>
+            @page {
+              size: 100mm 150mm; /* Standar ukuran label barcode (4x6 inch) */
+              margin: 0;
+            }
             body {
-              font-family: Arial, sans-serif;
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-              height: 100vh;
               margin: 0;
-              padding: 20px;
+              padding: 10px;
+              background-color: #fff;
             }
-            .qr-container {
-              text-align: center;
-              border: 1px solid #ddd;
-              padding: 20px;
+            .label-container {
+              width: 100%;
+              max-width: 90mm;
+              padding: 15px;
+              box-sizing: border-box;
+              border: 2px solid #000;
               border-radius: 8px;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+              text-align: center;
             }
-            .info {
-              margin-top: 20px;
+            .header-section {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-bottom: 2px solid #000;
+              padding-bottom: 10px;
+              margin-bottom: 15px;
+            }
+            .header-section img {
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              margin-right: 15px;
+            }
+            .header-section h2 {
+              margin: 0;
+              font-size: 18px;
+              font-weight: 800;
+              color: #000;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+            .qr-wrapper {
+              margin: 15px 0;
+            }
+            .info-section {
               text-align: left;
+              margin-top: 15px;
+              border-top: 1px dashed #000;
+              padding-top: 15px;
             }
-            .info p {
-              margin: 5px 0;
+            .info-row {
+              margin-bottom: 8px;
+              display: flex;
+              flex-direction: column;
             }
-            h2 {
-              margin-top: 0;
-              color: #1890ff;
+            .info-label {
+              font-size: 11px;
+              color: #555;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+            .info-value {
+              font-size: 14px;
+              font-weight: 700;
+              color: #000;
+            }
+            .highlight-value {
+              font-size: 18px;
+              font-weight: 900;
+              background-color: #f0f0f0;
+              padding: 4px 8px;
+              display: inline-block;
+              border-radius: 4px;
+              margin-top: 4px;
+              border: 1px solid #ccc;
             }
           </style>
         </head>
         <body>
-          <div class="qr-container">
-            <h2>Material Barcode</h2>
-            <div id="printQRCode"></div>
-            <div class="info">
-              <p><strong>Nomor SPB/Kontrak:</strong> ${data.nomorDokumen}</p>
-              <p><strong>Material:</strong> ${data.deskripsiMaterial}</p>
-              <p><strong>Normalisasi:</strong> ${data.normalisasiNumber || '-'}</p>
-              <p><strong>QTY:</strong> ${data.quantity} ${data.satuan}</p>
-              <p><strong>Kondisi:</strong> ${data.kondisi}</p>
-              <p><strong>Status:</strong> ${data.status || 'Aktif'}</p>
+          <div class="label-container">
+            <div class="header-section">
+              <img src="/logo.jpg" alt="Logo" />
+              <h2>LABEL MATERIAL</h2>
+            </div>
+
+            <div class="qr-wrapper" id="printQRCode"></div>
+
+            <div class="info-section">
+              <div class="info-row">
+                <span class="info-label">Normalisasi / Material ID</span>
+                <span class="info-value highlight-value">${data.normalisasiNumber || data.nomorDokumen}</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Deskripsi Material</span>
+                <span class="info-value" style="font-size: 13px;">${data.deskripsiMaterial}</span>
+              </div>
+              <div class="info-row" style="flex-direction: row; justify-content: space-between; margin-top: 10px;">
+                <div>
+                  <span class="info-label">Quantity</span><br/>
+                  <span class="info-value">${data.quantity} ${data.satuan}</span>
+                </div>
+                <div style="text-align: right;">
+                  <span class="info-label">Kondisi</span><br/>
+                  <span class="info-value">${data.kondisi}</span>
+                </div>
+              </div>
             </div>
           </div>
           <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>

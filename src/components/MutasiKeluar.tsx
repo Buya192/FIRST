@@ -1860,14 +1860,31 @@ const MutasiKeluar: React.FC = () => {
 
       {/* Modal Scanner Barcode */}
       <Modal
-        title="Scan Barcode / QR Code"
+        title={
+          <Space>
+            <BarcodeOutlined style={{ fontSize: '20px', color: '#1890ff' }} />
+            <span>Scan Material Barcode</span>
+          </Space>
+        }
         open={scanModalVisible}
         onCancel={() => setScanModalVisible(false)}
         footer={null}
         destroyOnClose
+        bodyStyle={{ padding: '24px 32px' }}
       >
-        <div style={{ textAlign: 'center', padding: '20px' }}>
-          <p>Silakan gunakan scanner barcode, atau ketik manual kode material di bawah ini:</p>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{
+            backgroundColor: '#e6f7ff',
+            padding: '20px',
+            borderRadius: '8px',
+            border: '1px dashed #91d5ff',
+            marginBottom: '20px'
+          }}>
+            <BarcodeOutlined style={{ fontSize: '48px', color: '#1890ff', marginBottom: '10px' }} />
+            <h3 style={{ margin: '0 0 10px 0', color: '#0050b3' }}>Scanner Ready</h3>
+            <p style={{ margin: 0, color: '#595959' }}>Arahkan scanner ke label material atau ketik kode secara manual.</p>
+          </div>
+
           <Input
             autoFocus
             size="large"
@@ -1875,11 +1892,13 @@ const MutasiKeluar: React.FC = () => {
             value={scannedCode}
             onChange={(e) => setScannedCode(e.target.value)}
             onPressEnter={(e) => handleScanBarcode((e.target as HTMLInputElement).value)}
-            prefix={<BarcodeOutlined />}
+            prefix={<BarcodeOutlined style={{ color: '#bfbfbf' }} />}
+            style={{ marginBottom: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
           />
           <Button
             type="primary"
-            style={{ marginTop: '16px' }}
+            size="large"
+            block
             onClick={() => handleScanBarcode(scannedCode)}
           >
             Cari Material
