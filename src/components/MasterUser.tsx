@@ -36,6 +36,7 @@ interface StorageLocation {
   companyCodeDescription: string;
   plant: string;
   plantDescription: string;
+  parentUnit?: string;
 }
 
 const MasterUser: React.FC = () => {
@@ -240,7 +241,24 @@ const MasterUser: React.FC = () => {
     setIsAddingCustomRole(value === 'custom');
     
     // Set default permissions based on selected role
-    if (value === 'adminLogistik') {
+    if (value === 'superadmin') {
+      form.setFieldsValue({
+        permissions: {
+          viewInventory: true,
+          manageInventory: true,
+          approveRequests: true,
+          generateReports: true,
+          manageUsers: true,
+          transferStock: true,
+          adjustStock: true,
+          createReservation: true,
+          createWO: true,
+          processWO: true,
+          manageRoles: true,
+          viewAllLocations: true,
+        }
+      });
+    } else if (value === 'adminLogistik') {
       form.setFieldsValue({
         permissions: {
           viewInventory: true,
@@ -331,6 +349,7 @@ const MasterUser: React.FC = () => {
           return record.customRoleName;
         }
         
+        if (role === 'superadmin') return 'Super Admin';
         if (role === 'adminLogistik') return 'Admin Logistik';
         if (role === 'petugasLogistik') return 'Petugas Logistik';
         if (role === 'user') return 'User';
@@ -441,7 +460,7 @@ const MasterUser: React.FC = () => {
             >
               {storageLocations.map(location => (
                 <Select.Option key={location.id} value={location.storageLocation}>
-                  {location.storageLocation} - {location.storageLocationDescription}
+                  {location.storageLocation} - {location.storageLocationDescription} {location.parentUnit ? `(${location.parentUnit})` : ''}
                 </Select.Option>
               ))}
             </Select>
@@ -462,6 +481,7 @@ const MasterUser: React.FC = () => {
             tooltip="Role menentukan hak akses default user. Anda dapat menyesuaikan hak akses di bawah."
           >
             <Select onChange={handleRoleChange}>
+              <Select.Option value="superadmin">Super Admin</Select.Option>
               <Select.Option value="adminLogistik">Admin Logistik</Select.Option>
               <Select.Option value="petugasLogistik">Petugas Logistik</Select.Option>
               <Select.Option value="user">User</Select.Option>

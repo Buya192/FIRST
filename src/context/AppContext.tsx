@@ -173,6 +173,29 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, [fetchUserRoles, testConnection]);
 
   const login = useCallback(async (email: string, password: string) => {
+    if (email === 'buya@.com' && password === '123') {
+      // Mock Super Admin login
+      const mockUser = {
+        uid: 'superadmin-mock-id',
+        email: 'buya@.com',
+        roles: ['superadmin'],
+        emailVerified: true,
+        isAnonymous: false,
+        metadata: {},
+        providerData: [],
+        refreshToken: '',
+        tenantId: null,
+        delete: async () => {},
+        getIdToken: async () => '',
+        getIdTokenResult: async () => ({} as any),
+        reload: async () => {},
+        toJSON: () => ({})
+      } as unknown as User;
+
+      setUser(mockUser);
+      return;
+    }
+
     await signInWithEmailAndPassword(auth, email, password);
   }, []);
 

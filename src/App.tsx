@@ -27,6 +27,7 @@ const StockMaterial = lazy(() => import('./components/StockMaterial'));
 const StockSAP = lazy(() => import('./components/StockSAP'));
 const PengembalianMaterial = lazy(() => import('./components/PengembalianMaterial'));
 const WOPetugasLogistik = lazy(() => import('./components/WOPetugasLogistik'));
+const Login = lazy(() => import('./components/Login'));
 const WOFinalisasiAkuntansi = lazy(() => import('./components/WOFinalisasiAkuntansi'));
 // Komponen milestone lama sudah digantikan oleh MonitoringMilestone
 const MaterialDetailPage = lazy(() => import('./components/MaterialDetailPage'));
@@ -65,7 +66,8 @@ const AppRoutes: React.FC = () => {
   logger.info('AppRoutes: Rendering routes');
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={user ? <Layout /> : <Navigate to="/login" replace />}>
         <Route index element={<Dashboard />} />
         <Route path="master-data" element={<MasterData />} />
         <Route path="master-gudang" element={<MasterGudang />} />

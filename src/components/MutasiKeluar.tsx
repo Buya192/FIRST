@@ -30,7 +30,8 @@ import {
   CloseOutlined,
   SaveOutlined,
   SendOutlined,
-  UndoOutlined
+  UndoOutlined,
+  BarcodeOutlined
 } from '@ant-design/icons';
 // import { useAppContext } from '../context/AppContext';
 import logger from '../utils/logger';
@@ -134,6 +135,8 @@ const MutasiKeluar: React.FC = () => {
   const [materialToCancel, setMaterialToCancel] = useState<{ index: number; material: Material } | null>(null);
   const [selectedHistoryEntries, setSelectedHistoryEntries] = useState<string[]>([]);
   const [cancelMode, setCancelMode] = useState<'all' | 'selected'>('all');
+  const [scanModalVisible, setScanModalVisible] = useState(false);
+  const [scannedCode, setScannedCode] = useState('');
   
   // Fungsi untuk menangani pembatalan material dengan status Complete
   const handleCancelCompleteMaterial = (index: number, material: Material) => {
@@ -347,6 +350,28 @@ const MutasiKeluar: React.FC = () => {
 
   const handlePageSizeChange = (value: number) => {
     setPageSize(value);
+  };
+
+  const handleScanBarcode = (code: string) => {
+    if (!code) return;
+    try {
+      // Decode assuming format produced by QRCodeGenerator (JSON stringified)
+      const data = JSON.parse(code);
+      // Search for normalisasi or ID in current list
+      const materialId = data.nomorDokumen || data.normalisasiNumber;
+      if (materialId) {
+        setSearchQuery(materialId);
+        setScanModalVisible(false);
+        setScannedCode('');
+        message.success(`Material ditemukan: ${data.deskripsiMaterial || materialId}`);
+      }
+    } catch (e) {
+      // If not JSON, just search the raw string
+      setSearchQuery(code);
+      setScanModalVisible(false);
+      setScannedCode('');
+      message.success(`Mencari data dengan kode: ${code}`);
+    }
   };
 
   const handleService = (record: Reservasi) => {
@@ -885,16 +910,30 @@ const MutasiKeluar: React.FC = () => {
                     />
                   </Col>
                   <Col xs={24} sm={12} md={8} lg={6}>
-                    <Tooltip title="Tampilkan/Sembunyikan Filter">
-                      <Button 
-                        type="default" 
-                        icon={<FilterOutlined />} 
-                        onClick={() => setFilterVisible(!filterVisible)}
-                        className={filterVisible ? styles.activeFilterButton : ''}
-                      >
-                        Filter
-                      </Button>
-                    </Tooltip>
+                    <Space>
+                      <Tooltip title="Tampilkan/Sembunyikan Filter">
+                        <Button
+                          type="default"
+                          icon={<FilterOutlined />}
+                          onClick={() => setFilterVisible(!filterVisible)}
+                          className={filterVisible ? styles.activeFilterButton : ''}
+                        >
+                          Filter
+                        </Button>
+                      </Tooltip>
+                      <Tooltip title="Scan Barcode / QR Code">
+                        <Button
+                          type="primary"
+                          icon={<BarcodeOutlined />}
+                          onClick={() => {
+                            setScanModalVisible(true);
+                            setScannedCode('');
+                          }}
+                        >
+                          Scan Material
+                        </Button>
+                      </Tooltip>
+                    </Space>
                   </Col>
                 </Row>
                 
@@ -1818,6 +1857,36 @@ const MutasiKeluar: React.FC = () => {
           )}
         </div>
       </Modal>
+
+      {/* Modal Scanner Barcode */}
+      <Modal
+        title="Scan Barcode / QR Code"
+        open={scanModalVisible}
+        onCancel={() => setScanModalVisible(false)}
+        footer={null}
+        destroyOnClose
+      >
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <p>Silakan gunakan scanner barcode, atau ketik manual kode material di bawah ini:</p>
+          <Input
+            autoFocus
+            size="large"
+            placeholder="Scan atau ketik kode..."
+            value={scannedCode}
+            onChange={(e) => setScannedCode(e.target.value)}
+            onPressEnter={(e) => handleScanBarcode((e.target as HTMLInputElement).value)}
+            prefix={<BarcodeOutlined />}
+          />
+          <Button
+            type="primary"
+            style={{ marginTop: '16px' }}
+            onClick={() => handleScanBarcode(scannedCode)}
+          >
+            Cari Material
+          </Button>
+        </div>
+      </Modal>
+
     </Card>
   );
 };

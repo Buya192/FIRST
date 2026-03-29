@@ -14,6 +14,7 @@ interface MasterGudangItem {
   plantDescription: string;
   storageLocation: string;
   storageLocationDescription: string;
+  parentUnit?: string;
 }
 
 const MasterGudang: React.FC = () => {
@@ -129,6 +130,7 @@ const MasterGudang: React.FC = () => {
                 plantDescription: row['Plant Description'] || '',
                 storageLocation: row['Storage Location'] || '',
                 storageLocationDescription: row['Storage Location Description'] || '',
+                parentUnit: row['Parent Unit'] || '',
               };
 
               console.log(`Processing row ${index}:`, newItem);
@@ -219,6 +221,11 @@ const MasterGudang: React.FC = () => {
       title: 'Storage Location Description',
       dataIndex: 'storageLocationDescription',
       key: 'storageLocationDescription',
+    },
+    {
+      title: 'Parent Unit',
+      dataIndex: 'parentUnit',
+      key: 'parentUnit',
     },
     {
       title: 'Action',
@@ -336,6 +343,12 @@ const MasterGudang: React.FC = () => {
             name="storageLocationDescription"
             label="Storage Location Description"
             rules={[{ required: true, message: 'Please input the Storage Location Description!' }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="parentUnit"
+            label="Parent Unit (e.g. UP3 Kupang)"
           >
             <Input />
           </Form.Item>

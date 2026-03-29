@@ -30,7 +30,7 @@ const AppHeader: React.FC<HeaderProps> = React.memo(({ collapsed, toggleSidebar 
 
   const logoElement = useMemo(() => (
     <div className="flex items-center">
-      <img src={logoApp} alt="Logo" className="h-8 ml-4 mr-2" />
+      <img src="/logo.jpg" alt="Logo" className="h-8 ml-4 mr-2" style={{ borderRadius: '50%' }} />
       <h1 className="text-white text-lg font-bold">FIRST</h1>
     </div>
   ), []);

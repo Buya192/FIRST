@@ -9,8 +9,10 @@ import {
   SearchOutlined, InfoCircleOutlined, PlusOutlined, DownloadOutlined,
   FilterOutlined, ReloadOutlined, BarChartOutlined, StockOutlined,
   SyncOutlined, AppstoreOutlined, WarningOutlined, RiseOutlined,
-  FileExcelOutlined, FilePdfOutlined, DownOutlined, CalendarOutlined
+  FileExcelOutlined, FilePdfOutlined, DownOutlined, CalendarOutlined,
+  QrcodeOutlined
 } from '@ant-design/icons';
+import QRCodeGenerator from './QRCodeGenerator';
 import { collection, doc, deleteDoc, updateDoc, addDoc, writeBatch, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { useAppContext } from '../context/AppContext';
@@ -95,6 +97,8 @@ const StockMaterial: React.FC = () => {
   const [locationOptions, setLocationOptions] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<moment.Moment | null>(null);
   const [dateRange, setDateRange] = useState<[moment.Moment | null, moment.Moment | null]>([null, null]);
+  const [qrModalVisible, setQrModalVisible] = useState(false);
+  const [selectedQrData, setSelectedQrData] = useState<any>(null);
 
   // Statistics state
   const [stats, setStats] = useState({
@@ -663,14 +667,23 @@ const StockMaterial: React.FC = () => {
       title: 'Action',
       key: 'action',
       render: (_: any, record: StockMaterialItem) => (
-        <span>
-          <Button icon={<EditOutlined />} onClick={() => handleEdit(record)} style={{ marginRight: 8 }}>
-            Edit
-          </Button>
-          <Button icon={<DeleteOutlined />} onClick={() => handleDelete(record.id)} style={{ marginRight: 8 }} danger>
-            Delete
-          </Button>
-        </span>
+        <Space size="small">
+          <Button icon={<QrcodeOutlined />} onClick={(e) => {
+            e.stopPropagation();
+            setSelectedQrData({
+              nomorDokumen: record.id,
+              deskripsiMaterial: record.materialDescription,
+              normalisasiNumber: record.material,
+              quantity: record.totalStock || record.stock || 0,
+              satuan: record.satuan,
+              kondisi: 'Baik',
+              status: 'Aktif'
+            });
+            setQrModalVisible(true);
+          }} title="Print QR Code" />
+          <Button icon={<EditOutlined />} onClick={(e) => { e.stopPropagation(); handleEdit(record); }} />
+          <Button icon={<DeleteOutlined />} onClick={(e) => { e.stopPropagation(); handleDelete(record.id); }} danger />
+        </Space>
       ),
     },
   ];
@@ -1155,6 +1168,17 @@ const StockMaterial: React.FC = () => {
             </Select>
           </Form.Item>
         </Form>
+      </Modal>
+
+      {/* QR Code Modal */}
+      <Modal
+        title="Print Material Barcode"
+        visible={qrModalVisible}
+        onCancel={() => setQrModalVisible(false)}
+        footer={null}
+        width={400}
+      >
+        {selectedQrData && <QRCodeGenerator data={selectedQrData} />}
       </Modal>
     </div>
   );
